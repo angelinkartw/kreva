@@ -1,0 +1,37 @@
+Variable Name	Description	Data Type	Value
+
+OH1	Does your business have a Business Identification Number (NIB)?	Numeric	1= No, 2= In Process; 3 = Yes
+OH2	Have you received any government funding assistance to support your business?	Numeric	1= No, 2= In Process; 3 = Yes
+OH3	Have you participated in any government-organized activities (e.g., training, workshops, or exhibitions)?	Numeric	1= No, 2= In Process; 3 = Yes
+OH4	Do you collaborate with other merchants or businesses to grow your business?	Numeric	1= No, 2= In Process; 3 = Yes
+OH5	Do you use digital marketing (e.g., social media, websites, or online ads) to promote your business?	Numeric	1= No, 2= In Process; 3 = Yes
+OH6	What is the primary source of financial capital for your business?	Numeric	1 = Own capital; 2 = Family; 3 = Bank/Credit 
+OH7	Your leader to employees on a personal level 	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH8	Your leader act as a role model for employees	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH9	Your leader to implementing ideas or suggestions from employees	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH10	Your leader directly involved in day-to-day work	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH11	Your leader actively participate in training new employees	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH12	Your leader treat employees fairly when giving punishments and rewards	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH13	Workplace is free from job-related accidents	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH14	I am satisfied with the working hours set in this company	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH15	My workload is manageable	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH16	The physical working conditions (e.g., noise, lighting, temperature) are comfortable	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH17	Most of employees are responsible and rarely miss work without valid reasons	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH18	I feel free to talk about work-related difficulties with my leader or colleagues	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH19	The atmosphere in my workplace is positive and supportive	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH20	The morale of employees in my workplace is generally high	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH21	Employees in my workplace help each other when needed	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH22	The level of trust among employees in my workplace is very strong	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH23	Teamwork in my workplace is effective	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH24	Employees in my workplace treat each other with respect	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH25	Employees in my workplace view their work as a form of dedication or worship	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH26	Working capital is adequate for daily business operations	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH27	The company is able to pay employee salaries on time	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH28	The equipment/machinery is in good condition and functions optimally	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH29	The business supply chain runs smoothly without significant disruptions	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH30	The demand for products/services is predictable.	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH31	The quality of business's long-term relationships with customers	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH32	Our business's ability to reach new markets or customers is excellent	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH33	Our business's sales growth over the past year has been very satisfactory	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH34	Our business's liabilities (e.g., loans, debts) are very manageable	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree
+OH35	Our business's cash flow situation is very healthy and stable	Numeric	1= Strongly disagree; 2= Disagree; 3= Uncertain or neutral; 4= Agree; 5= Strongly agree

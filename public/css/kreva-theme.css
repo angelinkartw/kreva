@@ -1,0 +1,227 @@
+:root {
+    --kreva-forest: #26402e;
+    --kreva-forest-dark: #1e3325;
+    --kreva-green: #416743;
+    --kreva-soft-green: #e6ede6;
+    --kreva-cream: #fbf9f4;
+    --kreva-warm-card: #f8f5ee;
+    --kreva-border: #e5dac5;
+    --kreva-text: #292f29;
+}
+
+body.kreva-analytics {
+    background: var(--kreva-cream) !important;
+    color: var(--kreva-text);
+}
+
+body.kreva-analytics .sidebar {
+    background: #fff !important;
+    border-color: var(--kreva-border) !important;
+    box-shadow: 6px 0 24px rgba(38, 64, 46, 0.04);
+}
+
+body.kreva-analytics .content-area {
+    background: var(--kreva-cream) !important;
+}
+
+body.kreva-analytics .sidebar-divider {
+    border-color: var(--kreva-border) !important;
+}
+
+body.kreva-analytics .nav-item.active {
+    background: var(--kreva-soft-green) !important;
+    color: var(--kreva-forest) !important;
+}
+
+body.kreva-analytics .nav-item.active .nav-icon {
+    filter: brightness(0) saturate(100%) invert(22%) sepia(13%) saturate(1000%) hue-rotate(75deg) brightness(94%) contrast(88%) !important;
+}
+
+body.kreva-analytics .nav-item:hover:not(.active) {
+    background: var(--kreva-warm-card) !important;
+    color: var(--kreva-forest) !important;
+}
+
+body.kreva-analytics .profile-card {
+    background: var(--kreva-soft-green) !important;
+}
+
+body.kreva-analytics .profile-card:hover {
+    background: #dce8dc !important;
+}
+
+body.kreva-analytics .profile-info h4,
+body.kreva-analytics .page-header h1,
+body.kreva-analytics .welcome-msg h1,
+body.kreva-analytics .section-title,
+body.kreva-analytics .table-title {
+    color: var(--kreva-forest) !important;
+}
+
+body.kreva-analytics .glass-card,
+body.kreva-analytics .card,
+body.kreva-analytics .table-card,
+body.kreva-analytics .form-card,
+body.kreva-analytics .progress-card,
+body.kreva-analytics .summary-box,
+body.kreva-analytics .rank-list-card,
+body.kreva-analytics .perf-box {
+    background-color: #fff !important;
+    border: 1px solid var(--kreva-border) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 8px 24px rgba(38, 64, 46, 0.06) !important;
+}
+
+body.kreva-analytics .score-box,
+body.kreva-analytics .hero-section,
+body.kreva-analytics .tips-card,
+body.kreva-analytics .tips-card--karyawan,
+body.kreva-analytics .step-badge,
+body.kreva-analytics .profile-card {
+    background-color: var(--kreva-soft-green) !important;
+}
+
+body.kreva-analytics .btn-primary-custom,
+body.kreva-analytics .btn-blue,
+body.kreva-analytics .btn-primary,
+body.kreva-analytics .btn-submit,
+body.kreva-analytics .btn-modal-primary,
+body.kreva-analytics .btn-modal-ok,
+body.kreva-analytics .btn-add-karyawan,
+body.kreva-analytics .btn-add,
+body.kreva-analytics .btn-action {
+    background-color: var(--kreva-forest) !important;
+    border-color: var(--kreva-forest) !important;
+    color: #fff !important;
+    border-radius: 999px !important;
+}
+
+body.kreva-analytics .btn-primary-custom:hover,
+body.kreva-analytics .btn-blue:hover,
+body.kreva-analytics .btn-primary:hover,
+body.kreva-analytics .btn-submit:hover,
+body.kreva-analytics .btn-modal-primary:hover,
+body.kreva-analytics .btn-modal-ok:hover,
+body.kreva-analytics .btn-add-karyawan:hover,
+body.kreva-analytics .btn-add:hover,
+body.kreva-analytics .btn-action:hover {
+    background-color: var(--kreva-forest-dark) !important;
+    border-color: var(--kreva-forest-dark) !important;
+}
+
+body.kreva-analytics .btn-secondary,
+body.kreva-analytics .btn-outline,
+body.kreva-analytics .btn-cancel {
+    background-color: var(--kreva-warm-card) !important;
+    border-color: var(--kreva-border) !important;
+    color: var(--kreva-forest) !important;
+    border-radius: 999px !important;
+}
+
+body.kreva-analytics .btn-secondary:hover,
+body.kreva-analytics .btn-outline:hover,
+body.kreva-analytics .btn-cancel:hover {
+    background-color: var(--kreva-soft-green) !important;
+    color: var(--kreva-forest-dark) !important;
+}
+
+body.kreva-analytics .action-link,
+body.kreva-analytics .back-link {
+    color: var(--kreva-green) !important;
+}
+
+body.kreva-analytics .table-header-box {
+    border-color: var(--kreva-green) !important;
+}
+
+body.kreva-analytics .data-table th {
+    background: var(--kreva-warm-card) !important;
+}
+
+body.kreva-analytics .data-table td {
+    border-color: #eee8dc !important;
+}
+
+body.kreva-analytics input:focus,
+body.kreva-analytics select:focus,
+body.kreva-analytics textarea:focus {
+    border-color: var(--kreva-green) !important;
+    box-shadow: 0 0 0 3px rgba(85, 130, 87, 0.14) !important;
+}
+
+body.kreva-analytics input[type="radio"],
+body.kreva-analytics input[type="checkbox"] {
+    accent-color: var(--kreva-green);
+}
+
+body.kreva-auth {
+    background: var(--kreva-cream) !important;
+}
+
+body.kreva-auth .left::before {
+    background-image:
+        radial-gradient(circle at 85% 20%, rgba(121, 161, 123, 0.28), transparent 34%),
+        linear-gradient(135deg, var(--kreva-forest-dark), var(--kreva-green)) !important;
+    opacity: 1 !important;
+}
+
+body.kreva-auth .right {
+    background: var(--kreva-cream) !important;
+}
+
+body.kreva-auth .form-wrapper h2 {
+    color: var(--kreva-forest) !important;
+}
+
+body.kreva-auth .form-wrapper > p {
+    color: #667366 !important;
+}
+
+body.kreva-auth input:focus,
+body.kreva-auth select:focus {
+    border-color: var(--kreva-green) !important;
+    box-shadow: 0 0 0 4px rgba(85, 130, 87, 0.14) !important;
+}
+
+body.kreva-auth button[type="submit"] {
+    background: var(--kreva-forest) !important;
+    border-radius: 999px !important;
+}
+
+body.kreva-auth button[type="submit"]:hover {
+    background: var(--kreva-forest-dark) !important;
+}
+
+body.kreva-auth .small a {
+    color: var(--kreva-green) !important;
+}
+
+body.kreva-auth .logo img {
+    filter: drop-shadow(0 3px 12px rgba(0, 0, 0, 0.16));
+}
+
+body.kreva-breeze {
+    background: var(--kreva-cream) !important;
+    color: var(--kreva-text);
+}
+
+body.kreva-breeze .kreva-breeze-card {
+    border: 1px solid var(--kreva-border);
+    border-radius: 24px;
+    box-shadow: 0 16px 48px rgba(38, 64, 46, 0.1);
+}
+
+body.kreva-breeze button,
+body.kreva-breeze [type="submit"] {
+    background-color: var(--kreva-forest) !important;
+}
+
+body.kreva-breeze button:hover,
+body.kreva-breeze [type="submit"]:hover {
+    background-color: var(--kreva-forest-dark) !important;
+}
+
+body.kreva-breeze input:focus {
+    border-color: var(--kreva-green) !important;
+    --tw-ring-color: rgba(85, 130, 87, 0.24) !important;
+}

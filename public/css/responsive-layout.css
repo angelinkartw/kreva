@@ -1,0 +1,338 @@
+/* ==========================================================================
+   SiSehat Global Responsive Layout CSS
+   ========================================================================== */
+
+/* 1. Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    z-index: 1001; /* Must be above content but below sidebar */
+    color: #1e293b;
+    transition: all 0.25s ease;
+    outline: none;
+}
+
+.mobile-menu-toggle:hover {
+    background: #f8fafc;
+    color: #2563eb;
+    transform: scale(1.05);
+}
+
+.mobile-menu-toggle svg {
+    width: 22px;
+    height: 22px;
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu-toggle.active svg {
+    transform: rotate(90deg);
+}
+
+/* 2. Sidebar Overlay */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 3. Media Queries for iPad / Tablets (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    body {
+        position: relative;
+    }
+
+    /* Show hamburger toggle */
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    /* Reposition sidebar off-screen */
+    .sidebar {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 100vh;
+        z-index: 1002 !important; /* Above toggle and overlay */
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: none;
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+        box-shadow: 10px 0 30px rgba(15, 23, 42, 0.15) !important;
+    }
+
+    /* Main Content adjustments */
+    .content-area {
+        padding-top: 75px !important;
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+        width: 100%;
+        overflow-y: auto;
+    }
+
+    /* Grid layout adjustments to stacked */
+    .main-wrapper {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .top-left-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .rank-container {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .asesmen-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .factors-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 20px !important;
+    }
+
+    .main-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .page-header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .page-header-flex .btn-add-karyawan {
+        width: auto;
+    }
+
+    .action-grid {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    .hero-section {
+        flex-direction: column !important;
+        text-align: center !important;
+        align-items: center !important;
+        gap: 20px !important;
+    }
+
+    .chart-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+}
+
+/* 4. Media Queries for Mobile / Phones (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .content-area {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+        padding-bottom: 24px !important;
+    }
+
+    /* Stack factors grid completely */
+    .factors-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Form row stacking */
+    .form-row {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    /* Table responsiveness wrapper */
+    .table-card {
+        padding: 20px 15px !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .data-table {
+        min-width: 600px; /* Forces scrollbar on very narrow screens instead of breaking layout */
+    }
+
+    /* Assessment Option Buttons Stack */
+    .options-group {
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+
+    .option-btn {
+        width: 100% !important;
+        text-align: left !important;
+        padding: 12px 16px !important;
+    }
+
+    /* Asesmen Header adjustments */
+    .header-top {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 15px !important;
+    }
+
+    .estimasi-waktu {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Role status bar adjustments */
+    .role-status-bar {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    .role-status-chip {
+        width: 100%;
+    }
+
+    /* Modal box mobile sizing */
+    .modal-box {
+        padding: 24px 16px !important;
+        width: 95% !important;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal-actions button, 
+    .modal-actions a {
+        width: 100% !important;
+    }
+
+    .status-box {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start !important;
+    }
+
+    /* Verification banner inside UMKM registration form */
+    .verification-banner {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .veri-icon {
+        width: 100% !important;
+        max-width: 120px;
+        height: auto !important;
+        aspect-ratio: 16/9;
+    }
+
+    /* Info card main */
+    .info-card-main {
+        height: 250px !important;
+    }
+
+    .summary-box {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        text-align: center !important;
+    }
+    
+    .summary-title-wrapper {
+        justify-content: center !important;
+    }
+    
+    .summary-right {
+        min-width: 100% !important;
+        padding: 15px !important;
+    }
+
+    .table-container {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .table-container table {
+        min-width: 600px;
+    }
+}
+
+/* ==========================================================================
+   Chart.js & Flexbox/Grid Canvas Scaling Lock Fixes (Global)
+   ========================================================================== */
+.main-wrapper,
+.top-left-grid,
+.left-col,
+.right-col,
+.glass-card,
+.radar-box,
+.chart-pie-box,
+.age-box,
+.rank-box,
+.radar-wrap,
+.chart-wrap,
+.chart-grid,
+.chart-grid > *,
+.donut-container,
+.table-container {
+    min-width: 0 !important;
+}
+
+.radar-wrap,
+.chart-wrap {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+}
+
+.radar-wrap canvas,
+.chart-wrap canvas {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+}
+
+.donut-container canvas,
+.content-area canvas {
+    max-width: 100% !important;
+}
+

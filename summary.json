@@ -1,0 +1,161 @@
+{
+    "metrics": {
+        "http_req_duration{expected_response:true}": {
+            "avg": 7930.660675,
+            "min": 48.2429,
+            "med": 6391.9924,
+            "max": 18969.2734,
+            "p(90)": 16048.866689999999,
+            "p(95)": 17100.05118
+        },
+        "http_req_sending": {
+            "med": 0.35215,
+            "max": 1.1794,
+            "p(90)": 0.5307,
+            "p(95)": 0.5492,
+            "avg": 0.2970541666666667,
+            "min": 0
+        },
+        "iteration_duration": {
+            "p(90)": 48618.35348,
+            "p(95)": 48693.50424,
+            "avg": 48017.1474,
+            "min": 47265.6398,
+            "med": 48017.1474,
+            "max": 48768.655
+        },
+        "iterations": {
+            "count": 2,
+            "rate": 0.039999416088523934
+        },
+        "vus": {
+            "value": 3,
+            "min": 3,
+            "max": 5
+        },
+        "http_req_blocked": {
+            "med": 0,
+            "max": 104.0826,
+            "p(90)": 103.72878,
+            "p(95)": 104.0826,
+            "avg": 21.58559166666667,
+            "min": 0
+        },
+        "http_reqs": {
+            "count": 24,
+            "rate": 0.47999299306228727
+        },
+        "vus_max": {
+            "value": 5,
+            "min": 5,
+            "max": 5
+        },
+        "data_sent": {
+            "count": 25181,
+            "rate": 503.61264826256064
+        },
+        "http_req_duration": {
+            "max": 18969.2734,
+            "p(90)": 16048.866689999999,
+            "p(95)": 17100.05118,
+            "avg": 7930.660675,
+            "min": 48.2429,
+            "med": 6391.9924,
+            "thresholds": {
+                "p(95)<25000": false
+            }
+        },
+        "http_req_connecting": {
+            "avg": 4.160804166666667,
+            "min": 0,
+            "med": 0,
+            "max": 20.4727,
+            "p(90)": 19.7006,
+            "p(95)": 20.19717
+        },
+        "checks": {
+            "passes": 24,
+            "fails": 0,
+            "value": 1
+        },
+        "http_req_failed": {
+            "passes": 0,
+            "fails": 24,
+            "thresholds": {
+                "rate<0.30": false
+            },
+            "value": 0
+        },
+        "http_req_tls_handshaking": {
+            "max": 56.1261,
+            "p(90)": 55.77228,
+            "p(95)": 56.1261,
+            "avg": 11.5703125,
+            "min": 0,
+            "med": 0
+        },
+        "http_req_receiving": {
+            "avg": 12.734929166666669,
+            "min": 0,
+            "med": 5.7007,
+            "max": 86.0191,
+            "p(90)": 22.0807,
+            "p(95)": 24.394009999999998
+        },
+        "data_received": {
+            "count": 507249,
+            "rate": 10144.831905743838
+        },
+        "http_req_waiting": {
+            "p(90)": 16037.8887,
+            "p(95)": 17080.989909999997,
+            "avg": 7917.628691666666,
+            "min": 39.3237,
+            "med": 6388.8895,
+            "max": 18946.399
+        }
+    },
+    "root_group": {
+        "name": "",
+        "path": "",
+        "id": "d41d8cd98f00b204e9800998ecf8427e",
+        "groups": {},
+        "checks": {
+                "GET /login status 200": {
+                    "path": "::GET /login status 200",
+                    "id": "3952e15df33ca781a74172890e037324",
+                    "passes": 5,
+                    "fails": 0,
+                    "name": "GET /login status 200"
+                },
+                "POST /login berhasil": {
+                    "name": "POST /login berhasil",
+                    "path": "::POST /login berhasil",
+                    "id": "9ad09c827e1a54849248ce319442ba0a",
+                    "passes": 5,
+                    "fails": 0
+                },
+                "GET /dashboard status 200": {
+                    "id": "b33293cebd48ee829c50d967508dac9c",
+                    "passes": 5,
+                    "fails": 0,
+                    "name": "GET /dashboard status 200",
+                    "path": "::GET /dashboard status 200"
+                },
+                "GET /enam-faktor status 200": {
+                    "passes": 5,
+                    "fails": 0,
+                    "name": "GET /enam-faktor status 200",
+                    "path": "::GET /enam-faktor status 200",
+                    "id": "be2819ca26ae6f2a25d01a32cbf497d0"
+                },
+                "GET /rekomendasi status 200": {
+                    "id": "b12050fed8073aadd1b996cdbacb472c",
+                    "passes": 4,
+                    "fails": 0,
+                    "name": "GET /rekomendasi status 200",
+                    "path": "::GET /rekomendasi status 200"
+                }
+            }
+    }
+}

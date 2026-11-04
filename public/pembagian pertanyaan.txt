@@ -1,0 +1,36 @@
+Indikator	Sub indikator	Pertanyaan	Tipe Faktor	Untuk Siapa	Rata-rata total
+OH1	Business Identification Number	Does your business have a Business Identification Number (NIB)?	Institutional resources	Owner	1,99
+OH2	Government funding assistance	Have you received any government funding assistance to support your business?	Institutional resources	Owner	1,85
+OH3	Participation in government activities	Have you participated in any government-organized activities (e.g., training, workshops, or exhibitions)?	Institutional resources	Owner	1,53
+OH4	Merchant cooperation	Do you collaborate with other merchants or businesses to grow your business?	Institutional resources	Owner	1,95
+OH5	Using digital marketing	Do you use digital marketing (e.g., social media, websites, or online ads) to promote your business?	Institutional resources	Owner	1,84
+OH6	Source of financial	What is the primary source of financial capital for your business?	Institutional resources	Owner	1,59
+OH7	Personal closeness with employees	Your leader to employees on a personal level 	Leader involvement	Employee	2,85
+OH8	Role model	Your leader act as a role model for employees	Leader involvement	Employee	2,95
+OH9	Open to employee ideas	Your leader to implementing ideas or suggestions from employees	Leader involvement	Employee	3,02
+OH10	Directly involved	Your leader directly involved in day-to-day work	Leader involvement	Employee	2,93
+OH11	Involved in training new employees	Your leader actively participate in training new employees	Leader involvement	Employee	2,90
+OH12	Treats employees fairly	Your leader treat employees fairly when giving punishments and rewards	Leader involvement	Employee	3,05
+OH13	Job-related accidents	Workplace is free from job-related accidents	Work environment quality	Employee	3,16
+OH14	Working hours	I am satisfied with the working hours set in this company	Work environment quality	Employee	3,21
+OH15	Workload	My workload is manageable	Work environment quality	Employee	3,40
+OH16	Physical environment	The physical working conditions (e.g., noise, lighting, temperature) are comfortable	Work environment quality	Employee	3,43
+OH17	Absenteeism	Most of employees are responsible and rarely miss work without valid reasons	Work environment quality	Owner	3,36
+OH18	Feel free to talk about work difficulties	I feel free to talk about work-related difficulties with my leader or colleagues	Organizational values 	Employee	2,89
+OH19	Family atmosphere	The atmosphere in my workplace is positive and supportive	Organizational values 	Employee	3,43
+OH20	Morale	The morale of employees in my workplace is generally high	Organizational values 	Owner	3,55
+OH21	Helping each other	Employees in my workplace help each other when needed	Organizational values 	Owner	3,29
+OH22	Mutual trust between employees	The level of trust among employees in my workplace is very strong	Organizational values 	Employee	3,63
+OH23	Teamwork	Teamwork in my workplace is effective	Organizational values 	Employee	3,54
+OH24	Respect each other	Employees in my workplace treat each other with respect	Organizational values 	Both	3,43
+OH25	Work is worship	Employees in my workplace view their work as a form of dedication or worship	Organizational values 	Both	4,19
+OH26	Working capital	Working capital is adequate for daily business operations	Organizational values 	Employee	3,47
+OH27	Employee salaries	The company is able to pay employee salaries on time	Operational stability 	Employee	2,43
+OH28	Equipment/machinery	The equipment/machinery is in good condition and functions optimally	Operational stability 	Employee	2,42
+OH29	Supply uncertainty	The business supply chain runs smoothly without significant disruptions	Operational stability 	Owner	2,37
+OH30	Demand uncertainties	The demand for products/services is predictable.	Operational stability 	Owner	2,42
+OH31	Long term relationship with customers	The quality of business's long-term relationships with customers	Operational stability 	Owner	2,32
+OH32	Market reach	Our business's ability to reach new markets or customers is excellent	Economics performance	Owner	1,79
+OH33	Sales growth	Our business's sales growth over the past year has been very satisfactory	Economics performance	Owner	1,83
+OH34	Liability	Our business's liabilities (e.g., loans, debts) are very manageable	Economics performance	Owner	1,70
+OH35	Cash Flow	Our business's cash flow situation is very healthy and stable	Economics performance	Owner	1,90

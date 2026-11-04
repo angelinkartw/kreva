@@ -1,0 +1,5568 @@
+{
+    "type": "Metric",
+    "data": {
+        "name": "http_reqs",
+        "type": "counter",
+        "contains": "default",
+        "thresholds": [],
+        "submetrics": null
+    },
+    "metric": "http_reqs"
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5482927+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "type": "Metric",
+    "data": {
+        "name": "http_req_duration",
+        "type": "trend",
+        "contains": "time",
+        "thresholds": [
+            "p(95)<25000"
+        ],
+        "submetrics": [
+            {
+                "name": "http_req_duration{expected_response:true}",
+                "suffix": "expected_response:true",
+                "tags": {
+                    "expected_response": "true"
+                }
+            }
+        ]
+    },
+    "metric": "http_req_duration"
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5482927+07:00",
+        "value": 42.2763,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "type": "Metric",
+    "data": {
+        "name": "http_req_blocked",
+        "type": "trend",
+        "contains": "time",
+        "thresholds": [],
+        "submetrics": null
+    },
+    "metric": "http_req_blocked"
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5482927+07:00",
+        "value": 147.0331,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "type": "Metric",
+    "data": {
+        "name": "http_req_connecting",
+        "type": "trend",
+        "contains": "time",
+        "thresholds": [],
+        "submetrics": null
+    },
+    "metric": "http_req_connecting"
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5482927+07:00",
+        "value": 22.0806,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "type": "Metric",
+    "data": {
+        "name": "http_req_tls_handshaking",
+        "type": "trend",
+        "contains": "time",
+        "thresholds": [],
+        "submetrics": null
+    },
+    "metric": "http_req_tls_handshaking"
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5482927+07:00",
+        "value": 88.2776,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "type": "Metric",
+    "data": {
+        "name": "http_req_sending",
+        "type": "trend",
+        "contains": "time",
+        "thresholds": [],
+        "submetrics": null
+    },
+    "metric": "http_req_sending"
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5482927+07:00",
+        "value": 4.0958,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "type": "Metric",
+    "data": {
+        "name": "http_req_waiting",
+        "type": "trend",
+        "contains": "time",
+        "thresholds": [],
+        "submetrics": null
+    },
+    "metric": "http_req_waiting"
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5482927+07:00",
+        "value": 35.5901,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "type": "Metric",
+    "data": {
+        "name": "http_req_receiving",
+        "type": "trend",
+        "contains": "time",
+        "thresholds": [],
+        "submetrics": null
+    },
+    "metric": "http_req_receiving"
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5482927+07:00",
+        "value": 2.5904,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "type": "Metric",
+    "data": {
+        "name": "http_req_failed",
+        "type": "rate",
+        "contains": "default",
+        "thresholds": [
+            "rate<0.30"
+        ],
+        "submetrics": null
+    },
+    "metric": "http_req_failed"
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5482927+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "type": "Metric",
+    "data": {
+        "name": "checks",
+        "type": "rate",
+        "contains": "default",
+        "thresholds": [],
+        "submetrics": null
+    },
+    "metric": "checks"
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5499816+07:00",
+        "value": 1,
+        "tags": {
+            "check": "GET /login status 200",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.558361+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.558361+07:00",
+        "value": 52.3446,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.558361+07:00",
+        "value": 147.0331,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.558361+07:00",
+        "value": 22.0806,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.558361+07:00",
+        "value": 88.2776,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.558361+07:00",
+        "value": 4.0958,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.558361+07:00",
+        "value": 46.7414,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.558361+07:00",
+        "value": 1.5074,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.558361+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.558361+07:00",
+        "value": 1,
+        "tags": {
+            "check": "GET /login status 200",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5611906+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5611906+07:00",
+        "value": 55.1742,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5611906+07:00",
+        "value": 147.0331,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5611906+07:00",
+        "value": 22.0806,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5611906+07:00",
+        "value": 88.2776,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5611906+07:00",
+        "value": 3.0769,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5611906+07:00",
+        "value": 52.0973,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5611906+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5611906+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.561921+07:00",
+        "value": 1,
+        "tags": {
+            "check": "GET /login status 200",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5697217+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5697217+07:00",
+        "value": 63.7053,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5697217+07:00",
+        "value": 147.0331,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5697217+07:00",
+        "value": 22.0806,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5697217+07:00",
+        "value": 88.2776,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5697217+07:00",
+        "value": 4.0958,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5697217+07:00",
+        "value": 38.1805,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5697217+07:00",
+        "value": 21.429,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5697217+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5697217+07:00",
+        "value": 1,
+        "tags": {
+            "check": "GET /login status 200",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5729742+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5729742+07:00",
+        "value": 66.9578,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5729742+07:00",
+        "value": 147.0331,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5729742+07:00",
+        "value": 22.0806,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5729742+07:00",
+        "value": 88.2776,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5729742+07:00",
+        "value": 4.0958,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5729742+07:00",
+        "value": 42.674,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5729742+07:00",
+        "value": 20.188,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5729742+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:45.5729742+07:00",
+        "value": 1,
+        "tags": {
+            "check": "GET /login status 200",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "type": "Metric",
+    "data": {
+        "name": "vus",
+        "type": "gauge",
+        "contains": "default",
+        "thresholds": [],
+        "submetrics": null
+    },
+    "metric": "vus"
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:46.3443202+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "type": "Metric",
+    "data": {
+        "name": "vus_max",
+        "type": "gauge",
+        "contains": "default",
+        "thresholds": [],
+        "submetrics": null
+    },
+    "metric": "vus_max"
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:46.3443202+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:47.3447047+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:47.3447047+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:48.3443067+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:48.3443067+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:49.0383356+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:49.0383356+07:00",
+        "value": 1485.8277,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:49.0383356+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:49.0383356+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:49.0383356+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:49.0383356+07:00",
+        "value": 1.4025,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:49.0383356+07:00",
+        "value": 1482.6664,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:49.0383356+07:00",
+        "value": 1.7588,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:49.0383356+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:49.0383356+07:00",
+        "value": 1,
+        "tags": {
+            "check": "POST /login berhasil",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:49.3439358+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:49.3439358+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:50.3437515+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:50.3437515+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:50.4590423+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:50.4590423+07:00",
+        "value": 2900.0074,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:50.4590423+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:50.4590423+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:50.4590423+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:50.4590423+07:00",
+        "value": 0.5077,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:50.4590423+07:00",
+        "value": 2899.4997,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:50.4590423+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:50.4590423+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:50.4595457+07:00",
+        "value": 1,
+        "tags": {
+            "check": "POST /login berhasil",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:51.344174+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:51.344174+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:51.8874388+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:51.8874388+07:00",
+        "value": 4325.3563,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:51.8874388+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:51.8874388+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:51.8874388+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:51.8874388+07:00",
+        "value": 0.7174,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:51.8874388+07:00",
+        "value": 4323.6938,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:51.8874388+07:00",
+        "value": 0.9451,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:51.8874388+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:51.8874388+07:00",
+        "value": 1,
+        "tags": {
+            "check": "POST /login berhasil",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:52.3440411+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:52.3440411+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:53.3126951+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:53.3126951+07:00",
+        "value": 5742.1556,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:53.3126951+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:53.3126951+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:53.3126951+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:53.3126951+07:00",
+        "value": 0.4819,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:53.3126951+07:00",
+        "value": 5741.1673,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:53.3126951+07:00",
+        "value": 0.5064,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:53.3126951+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:53.3126951+07:00",
+        "value": 1,
+        "tags": {
+            "check": "POST /login berhasil",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:53.3442262+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:53.3442262+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:54.3449821+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:54.3449821+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:54.729276+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:54.729276+07:00",
+        "value": 7155.1907,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:54.729276+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:54.729276+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:54.729276+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:54.729276+07:00",
+        "value": 0.3578,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:54.729276+07:00",
+        "value": 7154.8329,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:54.729276+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:54.729276+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "POST",
+            "name": "https://sisehat-web-production.up.railway.app/login",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "302",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/login"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:54.7300294+07:00",
+        "value": 1,
+        "tags": {
+            "check": "POST /login berhasil",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:55.344183+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:55.344183+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:56.3443409+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:56.3443409+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:56.6114584+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:56.6114584+07:00",
+        "value": 5572.3177,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:56.6114584+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:56.6114584+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:56.6114584+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:56.6114584+07:00",
+        "value": 0.3368,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:56.6114584+07:00",
+        "value": 5551.1436,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:56.6114584+07:00",
+        "value": 20.8373,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:56.6114584+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:56.6114584+07:00",
+        "value": 1,
+        "tags": {
+            "check": "GET /dashboard status 200",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:57.3440675+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:57.3440675+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:57.7869724+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:57.7869724+07:00",
+        "value": 5327.0799,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:57.7869724+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:57.7869724+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:57.7869724+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:57.7869724+07:00",
+        "value": 0.3438,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:57.7869724+07:00",
+        "value": 5303.6021,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:57.7869724+07:00",
+        "value": 23.134,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:57.7869724+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:57.7869724+07:00",
+        "value": 1,
+        "tags": {
+            "check": "GET /dashboard status 200",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:58.3447519+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:58.3447519+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:58.9880126+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:58.9880126+07:00",
+        "value": 5099.8978,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:58.9880126+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:58.9880126+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:58.9880126+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:58.9880126+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:58.9880126+07:00",
+        "value": 5078.8153,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:58.9880126+07:00",
+        "value": 21.0825,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:58.9880126+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:58.9885181+07:00",
+        "value": 1,
+        "tags": {
+            "check": "GET /dashboard status 200",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:59.3441053+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T15:59:59.3441053+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:00.1658028+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:00.1658028+07:00",
+        "value": 4852.2138,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:00.1658028+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:00.1658028+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:00.1658028+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:00.1658028+07:00",
+        "value": 0.4275,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:00.1658028+07:00",
+        "value": 4829.9025,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:00.1658028+07:00",
+        "value": 21.8838,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:00.1658028+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:00.1658028+07:00",
+        "value": 1,
+        "tags": {
+            "check": "GET /dashboard status 200",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:00.3444984+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:00.3444984+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:01.3440548+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:01.3440548+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:01.3473143+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:01.3473143+07:00",
+        "value": 4616.4335,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:01.3473143+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:01.3473143+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:01.3473143+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:01.3473143+07:00",
+        "value": 0.4145,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:01.3473143+07:00",
+        "value": 4598.6293,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:01.3473143+07:00",
+        "value": 17.3897,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:01.3473143+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/dashboard",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/dashboard"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:01.3473143+07:00",
+        "value": 1,
+        "tags": {
+            "check": "GET /dashboard status 200",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:02.3441254+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:02.3441254+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:02.498119+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:02.498119+07:00",
+        "value": 3886.3802,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:02.498119+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:02.498119+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:02.498119+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:02.498119+07:00",
+        "value": 0.4973,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:02.498119+07:00",
+        "value": 3881.1304,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:02.498119+07:00",
+        "value": 4.7525,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:02.498119+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:02.498119+07:00",
+        "value": 1,
+        "tags": {
+            "check": "GET /enam-faktor status 200",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:03.3443014+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:03.3443014+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:03.6792263+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:03.6792263+07:00",
+        "value": 3891.6527,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:03.6792263+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:03.6792263+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:03.6792263+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:03.6792263+07:00",
+        "value": 0.3548,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:03.6792263+07:00",
+        "value": 3870.6728,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:03.6792263+07:00",
+        "value": 20.6251,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:03.6792263+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:03.6792263+07:00",
+        "value": 1,
+        "tags": {
+            "check": "GET /enam-faktor status 200",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:04.344156+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:04.344156+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:04.8576684+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:04.8576684+07:00",
+        "value": 3867.9459,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:04.8576684+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:04.8576684+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:04.8576684+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:04.8576684+07:00",
+        "value": 0.3575,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:04.8576684+07:00",
+        "value": 3862.5912,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:04.8576684+07:00",
+        "value": 4.9972,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:04.8576684+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:04.8576684+07:00",
+        "value": 1,
+        "tags": {
+            "check": "GET /enam-faktor status 200",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:05.3437986+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:05.3437986+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:06.0105318+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:06.0105318+07:00",
+        "value": 3844.6305,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:06.0105318+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:06.0105318+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:06.0105318+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:06.0105318+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:06.0105318+07:00",
+        "value": 3838.8408,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:06.0105318+07:00",
+        "value": 5.7897,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:06.0105318+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:06.0105318+07:00",
+        "value": 1,
+        "tags": {
+            "check": "GET /enam-faktor status 200",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:06.3442785+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:06.3442785+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:07.1760294+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:07.1760294+07:00",
+        "value": 3828.7106,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:07.1760294+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:07.1760294+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:07.1760294+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:07.1760294+07:00",
+        "value": 0.5134,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:07.1760294+07:00",
+        "value": 3822.1787,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:07.1760294+07:00",
+        "value": 6.0185,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:07.1760294+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/enam-faktor",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/enam-faktor"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:07.1760294+07:00",
+        "value": 1,
+        "tags": {
+            "check": "GET /enam-faktor status 200",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:07.3441243+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:07.3441243+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:08.3444674+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:08.3444674+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:08.3498841+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:08.3498841+07:00",
+        "value": 3851.5292,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:08.3498841+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:08.3498841+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:08.3498841+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:08.3498841+07:00",
+        "value": 0.4964,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:08.3498841+07:00",
+        "value": 3847.4925,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:08.3498841+07:00",
+        "value": 3.5403,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:08.3498841+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:08.3506229+07:00",
+        "value": 1,
+        "tags": {
+            "check": "GET /rekomendasi status 200",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:09.3444503+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:09.3444503+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:09.522547+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:09.522547+07:00",
+        "value": 3842.809,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:09.522547+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:09.522547+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:09.522547+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:09.522547+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:09.522547+07:00",
+        "value": 3839.6582,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:09.522547+07:00",
+        "value": 3.1508,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:09.522547+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:09.522547+07:00",
+        "value": 1,
+        "tags": {
+            "check": "GET /rekomendasi status 200",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:10.344345+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:10.344345+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:10.6962869+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:10.6962869+07:00",
+        "value": 3838.2269,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:10.6962869+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:10.6962869+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:10.6962869+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:10.6962869+07:00",
+        "value": 0.3969,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:10.6962869+07:00",
+        "value": 3832.2832,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:10.6962869+07:00",
+        "value": 5.5468,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:10.6962869+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:10.6962869+07:00",
+        "value": 1,
+        "tags": {
+            "check": "GET /rekomendasi status 200",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:11.3440858+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:11.3440858+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "type": "Metric",
+    "data": {
+        "name": "data_sent",
+        "type": "counter",
+        "contains": "data",
+        "thresholds": [],
+        "submetrics": null
+    },
+    "metric": "data_sent"
+}
+{
+    "metric": "data_sent",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:11.3507111+07:00",
+        "value": 5241,
+        "tags": {
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "type": "Metric",
+    "data": {
+        "name": "data_received",
+        "type": "counter",
+        "contains": "data",
+        "thresholds": [],
+        "submetrics": null
+    },
+    "metric": "data_received"
+}
+{
+    "metric": "data_received",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:11.3507111+07:00",
+        "value": 106549,
+        "tags": {
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "type": "Metric",
+    "data": {
+        "name": "iteration_duration",
+        "type": "trend",
+        "contains": "time",
+        "thresholds": [],
+        "submetrics": null
+    },
+    "metric": "iteration_duration"
+}
+{
+    "metric": "iteration_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:11.3507111+07:00",
+        "value": 25998.2346,
+        "tags": {
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "type": "Metric",
+    "data": {
+        "name": "iterations",
+        "type": "counter",
+        "contains": "default",
+        "thresholds": [],
+        "submetrics": null
+    },
+    "metric": "iterations"
+}
+{
+    "metric": "iterations",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:11.3507111+07:00",
+        "value": 1,
+        "tags": {
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:11.8694175+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:11.8694175+07:00",
+        "value": 3858.6716,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:11.8694175+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:11.8694175+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:11.8694175+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:11.8694175+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:11.8694175+07:00",
+        "value": 3853.0692,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:11.8694175+07:00",
+        "value": 5.6024,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:11.8694175+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:11.8694175+07:00",
+        "value": 1,
+        "tags": {
+            "check": "GET /rekomendasi status 200",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:12.3441807+07:00",
+        "value": 4,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:12.3441807+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "data_sent",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:12.5229371+07:00",
+        "value": 5200,
+        "tags": {
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "data_received",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:12.5229371+07:00",
+        "value": 106433,
+        "tags": {
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "iteration_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:12.5229371+07:00",
+        "value": 27170.9897,
+        "tags": {
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "iterations",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:12.5229371+07:00",
+        "value": 1,
+        "tags": {
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "http_reqs",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:13.062803+07:00",
+        "value": 1,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:13.062803+07:00",
+        "value": 3886.3704,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_blocked",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:13.062803+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_connecting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:13.062803+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_tls_handshaking",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:13.062803+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_sending",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:13.062803+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_waiting",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:13.062803+07:00",
+        "value": 3882.1389,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_receiving",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:13.062803+07:00",
+        "value": 4.2315,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "http_req_failed",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:13.062803+07:00",
+        "value": 0,
+        "tags": {
+            "expected_response": "true",
+            "group": "",
+            "method": "GET",
+            "name": "https://sisehat-web-production.up.railway.app/rekomendasi",
+            "proto": "HTTP/2.0",
+            "scenario": "default",
+            "status": "200",
+            "tls_version": "tls1.3",
+            "url": "https://sisehat-web-production.up.railway.app/rekomendasi"
+        }
+    }
+}
+{
+    "metric": "checks",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:13.062803+07:00",
+        "value": 1,
+        "tags": {
+            "check": "GET /rekomendasi status 200",
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:13.344127+07:00",
+        "value": 3,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:13.344127+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "data_sent",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:13.6966411+07:00",
+        "value": 4959,
+        "tags": {
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "data_received",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:13.6966411+07:00",
+        "value": 106349,
+        "tags": {
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "iteration_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:13.6966411+07:00",
+        "value": 28344.1646,
+        "tags": {
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "iterations",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:13.6966411+07:00",
+        "value": 1,
+        "tags": {
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:14.3438966+07:00",
+        "value": 2,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:14.3438966+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "data_sent",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:14.8697712+07:00",
+        "value": 4963,
+        "tags": {
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "data_received",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:14.8697712+07:00",
+        "value": 106558,
+        "tags": {
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "iteration_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:14.8697712+07:00",
+        "value": 29517.8238,
+        "tags": {
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "iterations",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:14.8697712+07:00",
+        "value": 1,
+        "tags": {
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "vus",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:15.3445765+07:00",
+        "value": 1,
+        "tags": {}
+    }
+}
+{
+    "metric": "vus_max",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:15.3445765+07:00",
+        "value": 5,
+        "tags": {}
+    }
+}
+{
+    "metric": "data_sent",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:16.0633339+07:00",
+        "value": 5143,
+        "tags": {
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "data_received",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:16.0633339+07:00",
+        "value": 106449,
+        "tags": {
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "iteration_duration",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:16.0633339+07:00",
+        "value": 30710.8574,
+        "tags": {
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
+{
+    "metric": "iterations",
+    "type": "Point",
+    "data": {
+        "time": "2026-05-27T16:00:16.0633339+07:00",
+        "value": 1,
+        "tags": {
+            "group": "",
+            "scenario": "default"
+        }
+    }
+}
