@@ -1,390 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - KREVA</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fbf9f4">
+    <title>Masuk - KREVA</title>
+    <link rel="icon" type="image/svg+xml" href="{{ asset('images/kreva_logo.svg') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-        min-height: 100vh;
-        overflow-x: hidden;
-        background: #f9fafb; /* Backup background */
-    }
-
-    .container {
-        display: flex;
-        min-height: 100vh;
-        width: 100%;
-    }
-
-    /* ================= LEFT SIDE ================= */
-    .left {
-        flex: 1.2;
-        position: relative;
-        background: #000;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: clamp(40px, 8vw, 80px);
-        overflow: hidden;
-    }
-
-    .left::before {
-        content: "";
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/bg_login.jpg');
-        background-size: cover;
-        background-position: center;
-        opacity: 0.6; /* Sesuaikan nilai ini (0.0 - 1.0) */
-        z-index: 1;
-    }
-
-    .left > * {
-        position: relative;
-        z-index: 2;
-    }
-
-    .logo img {
-        height: 45px; /* Sesuaikan tinggi logo agar pas */
-        width: auto;
-    }
-
-    .logo {
-        position: absolute;
-        top: 40px;
-        left: clamp(40px, 8vw, 80px);
-        display: flex;
-        align-items: center;
-    }
-
-    .left h1 {
-        font-size: clamp(32px, 4vw, 48px);
-        font-weight: 800; /* Dibuat Bold */
-        max-width: 500px;
-        line-height: 1.2;
-        margin-bottom: 20px;
-    }
-
-    .left p {
-        max-width: 450px;
-        opacity: 0.9;
-        font-size: clamp(15px, 1.2vw, 18px);
-        line-height: 1.6;
-    }
-
-    /* ================= RIGHT SIDE ================= */
-    .right {
-        flex: 1; /* Mengambil sisa ruang */
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-        background: #ffffff;
-        padding: clamp(30px, 5vw, 60px); /* Padding dinamis, MENGGANTIKAN padding-left yang kaku */
-    }
-
-    .form-wrapper {
-        width: 100%;
-        max-width: 480px; /* Disamakan dengan Register */
-        display: flex;
-        flex-direction: column;
-    }
-
-    .form-wrapper h2 {
-        font-size: clamp(28px, 3vw, 36px);
-        font-weight: 700; /* Dibuat Bold */
-        color: #111;
-        margin-bottom: 8px;
-    }
-
-    .form-wrapper > p {
-        font-size: 15px;
-        color: #666;
-        margin-bottom: 32px;
-        line-height: 1.5;
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 20px; /* Jarak antar input sedikit diperlebar agar tidak sesak */
-    }
-
-    /* Tambahan grup input untuk kerapian (opsional tapi disarankan) */
-    .input-group {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .input-group label {
-        font-size: 14px;
-        font-weight: 600;
-        color: #333;
-    }
-
-    input {
-        width: 100%;
-        padding: 14px 16px; 
-        border-radius: 8px;
-        border: 1px solid #d1d5db;
-        font-size: 15px;
-        transition: all 0.2s ease;
-        background: #fcfcfc; /* Disamakan dengan Register */
-    }
-
-    select {
-        width: 100%;
-        padding: 14px 16px;
-        border-radius: 8px;
-        border: 1px solid #d1d5db;
-        font-size: 15px;
-        background: #fcfcfc;
-    }
-
-    input:focus {
-        border-color: #1e5eff;
-        background: #ffffff;
-        outline: none;
-        box-shadow: 0 0 0 4px rgba(30, 94, 255, 0.1);
-    }
-
-    .error {
-        color: #d93025;
-        font-size: 14px;
-        background: #fce8e6;
-        padding: 12px 16px;
-        border-radius: 8px;
-        margin-bottom: 24px;
-        border-left: 4px solid #d93025;
-    }
-
-    button {
-        width: 100%;
-        padding: 14px 16px; 
-        background: #064ECC;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.2s ease, transform 0.1s ease;
-        margin-top: 10px; /* Disamakan dengan Register */
-    }
-
-    button:hover {
-        background: #064ECC; /* Mengikuti warna baru yang Anda masukkan */
-        opacity: 0.9;
-    }
-
-    button:active {
-        transform: scale(0.98); /* Efek klik */
-    }
-
-    .small {
-        text-align: center;
-        margin-top: 24px; /* Disamakan dengan Register */
-        font-size: 14px;
-        color: #555;
-    }
-
-    .small a {
-        color: #064ECC;
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.2s;
-    }
-
-    .small a:hover {
-        color: #174ad6;
-        text-decoration: underline;
-    }
-
-    /* Password Show/Hide Styles */
-    .password-wrapper {
-        position: relative;
-        display: flex;
-        align-items: center;
-    }
-
-    .password-wrapper input {
-        padding-right: 45px;
-    }
-
-    .toggle-password {
-        position: absolute;
-        right: 12px;
-        background: none;
-        border: none;
-        padding: 0;
-        margin: 0;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #666;
-        transition: color 0.2s;
-        width: 24px;
-        height: 24px;
-        z-index: 10;
-    }
-
-    .toggle-password:hover {
-        color: #064ECC;
-        background: transparent !important;
-        opacity: 1 !important;
-    }
-    
-    .toggle-password:hover svg {
-        fill: none !important;
-    }
-    
-    .toggle-password svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    /* 🔥 RESPONSIVE */
-    @media (max-width: 900px) {
-        .container {
-            flex-direction: column;
+        :root {
+            color-scheme: light;
+            font-family: 'Poppins', sans-serif;
+            color: #292b25;
+            background: #fbf9f4;
+            font-synthesis: none;
         }
-
-        .left {
-            flex: none; 
-            padding: 100px 30px 60px; /* Padding disesuaikan untuk mobile */
+        * { box-sizing: border-box; }
+        body { min-width: 320px; min-height: 100vh; margin: 0; }
+        a { color: inherit; }
+        .page { min-height: 100vh; display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(420px, .92fr); }
+        .story { position: relative; display: flex; min-height: 100vh; flex-direction: column; justify-content: space-between; overflow: hidden; padding: 38px clamp(32px, 6vw, 88px); color: #fff; background: #26402e; }
+        .story::before { position: absolute; inset: 0; content: ''; background: linear-gradient(180deg, rgba(20, 39, 26, .2), rgba(20, 39, 26, .88)), url('{{ asset('images/landing/hero-composition.png') }}') center / cover; }
+        .story > * { position: relative; z-index: 1; }
+        .brand img { display: block; width: 140px; height: auto; filter: brightness(0) invert(1); }
+        .story-copy { max-width: 570px; padding: 70px 0; }
+        .eyebrow { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 8px 14px; color: #f8ede1; font-size: 12px; font-weight: 600; letter-spacing: .04em; }
+        .eyebrow::before { width: 7px; height: 7px; border-radius: 50%; background: #e9a46e; content: ''; }
+        h1 { margin: 22px 0 14px; font-size: clamp(36px, 4.5vw, 64px); line-height: 1.12; letter-spacing: -.04em; }
+        .story-copy p { max-width: 450px; margin: 0; color: #f4eee2; font-size: 16px; line-height: 1.8; }
+        .story-foot { color: rgba(255,255,255,.75); font-size: 12px; }
+        .form-side { display: grid; place-items: center; padding: 36px clamp(24px, 5vw, 76px); }
+        .form-card { width: min(100%, 440px); }
+        .mobile-brand { display: none; }
+        .back-link { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 28px; color: #647064; font-size: 13px; font-weight: 500; text-decoration: none; }
+        .back-link:hover, .text-link:hover { color: #26402e; text-decoration: underline; }
+        h2 { margin: 0; color: #1e3325; font-size: clamp(30px, 3vw, 38px); line-height: 1.2; letter-spacing: -.035em; }
+        .intro { margin: 10px 0 28px; color: #77786f; font-size: 14px; line-height: 1.7; }
+        .notice { margin: 0 0 18px; border: 1px solid #f1c7bb; border-radius: 12px; background: #fff4f0; padding: 12px 14px; color: #a53d2f; font-size: 13px; line-height: 1.6; }
+        form { display: grid; gap: 18px; }
+        .field { display: grid; gap: 8px; }
+        label { color: #41443d; font-size: 13px; font-weight: 600; }
+        input, select { width: 100%; min-height: 50px; border: 1px solid #deded5; border-radius: 12px; outline: 0; background: #fffefa; padding: 0 15px; color: #292b25; font: inherit; font-size: 14px; transition: border-color .2s, box-shadow .2s; }
+        input::placeholder { color: #a2a399; }
+        input:focus, select:focus { border-color: #558257; box-shadow: 0 0 0 4px rgba(85,130,87,.12); }
+        .password-wrap { position: relative; }
+        .password-wrap input { padding-right: 68px; }
+        .show-password { position: absolute; top: 50%; right: 12px; transform: translateY(-50%); border: 0; background: transparent; padding: 7px; color: #558257; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+        .field-error { color: #b44335; font-size: 12px; }
+        .form-options { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: -3px; color: #72746c; font-size: 12px; }
+        .remember { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; }
+        .remember input { width: 16px; min-height: 16px; height: 16px; margin: 0; accent-color: #345236; }
+        .text-link { color: #345236; font-weight: 600; text-decoration: none; }
+        .submit { min-height: 52px; border: 0; border-radius: 12px; background: #26402e; color: #fff; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; box-shadow: 0 8px 18px rgba(38,64,46,.16); transition: background .2s, transform .2s; }
+        .submit:hover { transform: translateY(-1px); background: #1e3325; }
+        .divider { display: flex; align-items: center; gap: 14px; margin: 24px 0 18px; color: #999a91; font-size: 12px; }
+        .divider::before, .divider::after { flex: 1; height: 1px; background: #e9e5db; content: ''; }
+        .register-prompt { margin: 0; color: #77786f; text-align: center; font-size: 13px; }
+        .register-prompt a { color: #345236; font-weight: 700; text-decoration: none; }
+        .register-prompt a:hover { text-decoration: underline; }
+        @media (max-width: 800px) {
+            .page { grid-template-columns: 1fr; }
+            .story { display: none; }
+            .form-side { min-height: 100vh; padding: 30px 22px; }
+            .mobile-brand { display: block; margin-bottom: 36px; }
+            .mobile-brand img { width: 128px; height: auto; }
+            .back-link { margin-bottom: 22px; }
         }
-
-        .logo {
-            top: 30px;
-            left: 30px;
+        @media (max-width: 420px) {
+            .form-side { padding: 24px 18px; }
+            .form-options { align-items: flex-start; }
         }
-
-        .right {
-            flex: 1; 
-            padding: 40px 30px;
-        }
-
-        .form-wrapper {
-            max-width: 100%; /* Memaksimalkan lebar di layar HP */
-        }
-    }
     </style>
-    <link href="{{ asset('css/kreva-theme.css') }}" rel="stylesheet">
 </head>
-<body class="kreva-auth">
-
-<div class="container">
-
-    <div class="left">
-        <div class="logo">
-            <img src="{{ asset('images/kreva_logo_white.svg') }}" alt="KREVA Logo">
+<body>
+<main class="page">
+    <section class="story" aria-label="Tentang KREVA">
+        <a class="brand" href="{{ url('/') }}" aria-label="Kembali ke beranda">
+            <img src="{{ asset('images/kreva_logo.svg') }}" alt="KREVA">
+        </a>
+        <div class="story-copy">
+            <span class="eyebrow">Marketplace UMKM Indonesia</span>
+            <h1>Cerita lokal,<br>karya istimewa.</h1>
+            <p>Temukan karya pilihan dari para pengrajin dan pelaku usaha lokal, atau kelola toko Anda bersama KREVA.</p>
         </div>
+        <div class="story-foot">© {{ date('Y') }} KREVA · Dukung karya lokal Indonesia</div>
+    </section>
 
-        <h1>Masuk ke Marketplace UMKM KREVA</h1>
-        <p>
-            Jelajahi produk sebagai pembeli atau kelola katalog produk sebagai penjual.
-        </p>
-    </div>
-
-    <div class="right">
-        <div class="form-wrapper">
-
-            <h2>Masuk</h2>
-            <p>Masuk dengan username Anda. Halaman awal akan disesuaikan dengan jenis akun.</p>
+    <section class="form-side">
+        <div class="form-card">
+            <a class="mobile-brand" href="{{ url('/') }}" aria-label="Kembali ke beranda">
+                <img src="{{ asset('images/kreva_logo.svg') }}" alt="KREVA">
+            </a>
+            <a class="back-link" href="{{ url('/') }}"><span aria-hidden="true">←</span> Kembali ke beranda</a>
+            <h2>Selamat datang</h2>
+            <p class="intro">Masuk ke akun KREVA untuk melanjutkan.</p>
 
             @if (session('database_error'))
-                <div class="error" role="alert">{{ session('database_error') }}</div>
+                <div class="notice" role="alert">{{ session('database_error') }}</div>
             @endif
-
             @if ($errors->any())
-                <div class="error">
-                    {{ $errors->first() }}
-                </div>
+                <div class="notice" role="alert">{{ $errors->first() }}</div>
             @endif
 
-            <form method="POST" action="{{ route('login') }}">
+            <form method="POST" action="{{ route('login.store') }}">
                 @csrf
-
-                <div class="input-group">
-                    <label for="username">Username</label>
-                    <input 
-                        type="text" 
-                        id="username"
-                        name="username" 
-                        placeholder="Masukkan Username"
-                        value="{{ old('username', old('email')) }}"
-                        required
-                    >
-                    @error('username') <span class="error">{{ $message }}</span> @enderror
+                <div class="field">
+                    <label for="username">Username atau email</label>
+                    <input type="text" id="username" name="username" value="{{ old('username', old('email')) }}" placeholder="Masukkan username atau email" autocomplete="username" required autofocus>
+                    @error('username') <span class="field-error">{{ $message }}</span> @enderror
+                    @error('email') <span class="field-error">{{ $message }}</span> @enderror
                 </div>
 
-                <div class="input-group">
+                <div class="field">
                     <label for="account_type">Masuk sebagai</label>
                     <select id="account_type" name="account_type" required>
-                        <option value="buyer" {{ old('account_type', request('account_type', 'buyer')) === 'buyer' ? 'selected' : '' }}>Pembeli UMKM</option>
-                        <option value="seller" {{ old('account_type', request('account_type')) === 'seller' ? 'selected' : '' }}>Penjual UMKM</option>
-                        <option value="employee" {{ old('account_type', request('account_type')) === 'employee' ? 'selected' : '' }}>Karyawan UMKM</option>
+                        <option value="buyer" {{ old('account_type', request('account_type', 'buyer')) === 'buyer' ? 'selected' : '' }}>Pembeli</option>
+                        <option value="seller" {{ old('account_type', request('account_type')) === 'seller' ? 'selected' : '' }}>Penjual</option>
+                        <option value="employee" {{ old('account_type', request('account_type')) === 'employee' ? 'selected' : '' }}>Karyawan</option>
                     </select>
-                    @error('account_type') <span class="error">{{ $message }}</span> @enderror
+                    @error('account_type') <span class="field-error">{{ $message }}</span> @enderror
                 </div>
 
-                <div class="input-group" x-data="{ show: false }">
-                    <label for="password">Kata Sandi</label>
-                    <div class="password-wrapper">
-                        <input 
-                            type="password"
-                            :type="show ? 'text' : 'password'" 
-                            id="password"
-                            name="password" 
-                            placeholder="Minimal 8 karakter"
-                            required
-                        >
-                        <button type="button" class="toggle-password" @click="show = !show">
-                            <svg x-show="!show" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                            </svg>
-                            <svg x-show="show" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="display: none;">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.822 7.822L21 21m-2.278-2.278-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
-                            </svg>
-                        </button>
+                <div class="field">
+                    <label for="password">Kata sandi</label>
+                    <div class="password-wrap">
+                        <input type="password" id="password" name="password" placeholder="Masukkan kata sandi" autocomplete="current-password" required>
+                        <button class="show-password" type="button" data-password-toggle="password" aria-label="Tampilkan kata sandi">Lihat</button>
                     </div>
+                    @error('password') <span class="field-error">{{ $message }}</span> @enderror
                 </div>
 
-                <button type="submit">Masuk</button>
+                <div class="form-options">
+                    <label class="remember" for="remember">
+                        <input id="remember" type="checkbox" name="remember" value="1" {{ old('remember') ? 'checked' : '' }}>
+                        Ingat saya
+                    </label>
+                    <a class="text-link" href="{{ route('password.request') }}">Lupa kata sandi?</a>
+                </div>
+
+                <button class="submit" type="submit">Masuk ke akun</button>
             </form>
 
-            <div class="small">
-                Belum memiliki akun?
-                <a href="{{ route('register') }}">Daftar</a>
-            </div>
-            <div class="small" style="margin-top: 12px;">
-                <a href="{{ route('login', ['account_type' => 'seller']) }}">Masuk sebagai Penjual</a>
-                &nbsp;·&nbsp;
-                <a href="{{ route('login', ['account_type' => 'buyer']) }}">Masuk sebagai Pembeli</a>
-            </div>
-            <div class="small" style="margin-top: 12px;">
-                <a href="{{ route('password.request') }}">Lupa kata sandi?</a>
-            </div>
-
+            <div class="divider">Belum bergabung?</div>
+            <p class="register-prompt">Buat akun baru <a href="{{ route('register') }}">Daftar di sini</a></p>
         </div>
-    </div>
-
-</div>
-
+    </section>
+</main>
+<script>
+    document.querySelectorAll('[data-password-toggle]').forEach((button) => {
+        button.addEventListener('click', () => {
+            const input = document.getElementById(button.dataset.passwordToggle);
+            const visible = input.type === 'password';
+            input.type = visible ? 'text' : 'password';
+            button.textContent = visible ? 'Sembunyi' : 'Lihat';
+            button.setAttribute('aria-label', visible ? 'Sembunyikan kata sandi' : 'Tampilkan kata sandi');
+        });
+    });
+</script>
 </body>
 </html>

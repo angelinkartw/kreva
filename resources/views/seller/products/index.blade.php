@@ -42,12 +42,12 @@
                         @foreach ($products as $product)
                             <tr>
                                 <td class="max-w-sm px-5 py-4">
-                                    <p class="font-semibold text-stone-900">{{ $product->nama_produk }}</p>
-                                    <p class="mt-1 truncate text-xs text-stone-500">{{ $product->deskripsi }}</p>
+                                    <p class="font-semibold text-stone-900">{{ $product->name }}</p>
+                                    <p class="mt-1 truncate text-xs text-stone-500">{{ $product->description }}</p>
                                 </td>
-                                <td class="px-5 py-4">{{ $product->kategori }}</td>
-                                <td class="whitespace-nowrap px-5 py-4">Rp {{ number_format((float) $product->harga, 0, ',', '.') }}</td>
-                                <td class="px-5 py-4">{{ $product->stok }}</td>
+                                <td class="px-5 py-4">{{ $product->category?->name }}</td>
+                                <td class="whitespace-nowrap px-5 py-4">Rp {{ number_format((float) $product->variants_min_price, 0, ',', '.') }}</td>
+                                <td class="px-5 py-4">{{ $product->variants_sum_stock ?? 0 }}</td>
                                 <td class="whitespace-nowrap px-5 py-4">
                                     <div class="flex items-center gap-3">
                                         <a href="{{ route('seller.products.edit', $product) }}" class="font-semibold text-[#416743] hover:underline">Edit</a>

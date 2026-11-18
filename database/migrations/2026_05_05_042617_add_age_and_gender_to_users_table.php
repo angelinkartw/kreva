@@ -8,18 +8,38 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            // Tambahkan nullable() agar tidak error pada data user yang sudah ada sebelumnya
-            $table->integer('age')->nullable()->after('email'); 
-            $table->string('gender')->nullable()->after('age');
-        });
+        if (! Schema::hasTable('users')) {
+            return;
+        }
+
+        if (! Schema::hasColumn('users', 'age')) {
+            Schema::table('users', function (Blueprint $table) {
+                $table->integer('age')->nullable()->after('email');
+            });
+        }
+
+        if (! Schema::hasColumn('users', 'gender')) {
+            Schema::table('users', function (Blueprint $table) {
+                $table->string('gender')->nullable()->after('age');
+            });
+        }
     }
 
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            // Untuk menghapus kolom jika melakukan rollback
-            $table->dropColumn(['age', 'gender']);
-        });
+        if (! Schema::hasTable('users')) {
+            return;
+        }
+
+        $columns = array_filter(
+            ['age', 'gender'],
+            fn (string $column): bool => Schema::hasColumn('users', $column)
+        );
+
+        if ($columns !== []) {
+            Schema::table('users', function (Blueprint $table) use ($columns) {
+                $table->dropColumn($columns);
+            });
+        }
     }
 };

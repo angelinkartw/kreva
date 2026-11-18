@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Hidden;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -25,14 +27,29 @@ class User extends Authenticatable
 
     const UPDATED_AT = null;
 
-    public function products(): HasMany
+    public function products(): HasManyThrough
     {
-        return $this->hasMany(Product::class, 'id_user', 'id_user');
+        return $this->hasManyThrough(Product::class, Store::class, 'user_id', 'store_id', 'id_user', 'id');
+    }
+
+    public function store(): HasOne
+    {
+        return $this->hasOne(Store::class, 'user_id', 'id_user');
     }
 
     public function orders(): HasMany
     {
-        return $this->hasMany(Order::class, 'id_user', 'id_user');
+        return $this->hasMany(Order::class, 'buyer_id', 'id_user');
+    }
+
+    public function addresses(): HasMany
+    {
+        return $this->hasMany(Address::class, 'user_id', 'id_user');
+    }
+
+    public function cart(): HasOne
+    {
+        return $this->hasOne(Cart::class, 'user_id', 'id_user');
     }
 
     /**

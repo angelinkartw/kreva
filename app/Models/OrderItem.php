@@ -2,35 +2,30 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-#[Fillable(['id_order', 'id_produk', 'nama_produk', 'harga', 'kuantitas', 'subtotal'])]
 class OrderItem extends Model
 {
-    protected $table = 'order_items';
+    protected $guarded = ['*'];
 
-    protected $primaryKey = 'id_order_item';
+    protected $casts = [
+        'price_snapshot' => 'integer',
+        'qty' => 'integer',
+    ];
 
-    public $timestamps = false;
-
-    protected function casts(): array
+    public function storeOrder(): BelongsTo
     {
-        return [
-            'harga' => 'decimal:2',
-            'subtotal' => 'decimal:2',
-            'kuantitas' => 'integer',
-        ];
-    }
-
-    public function order(): BelongsTo
-    {
-        return $this->belongsTo(Order::class, 'id_order', 'id_order');
+        return $this->belongsTo(StoreOrder::class);
     }
 
     public function product(): BelongsTo
     {
-        return $this->belongsTo(Product::class, 'id_produk', 'id_produk');
+        return $this->belongsTo(Product::class);
+    }
+
+    public function variant(): BelongsTo
+    {
+        return $this->belongsTo(ProductVariant::class, 'variant_id');
     }
 }

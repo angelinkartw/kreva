@@ -1,447 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fbf9f4">
     <title>Daftar - KREVA</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-
+    <link rel="icon" type="image/svg+xml" href="{{ asset('images/kreva_logo.svg') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-        min-height: 100vh;
-        overflow-x: hidden;
-        background: #f9fafb;
-    }
-
-    .container {
-        display: flex;
-        min-height: 100vh;
-        width: 100%;
-    }
-
-    /* ================= LEFT SIDE ================= */
-    .left {
-        flex: 1.2;
-        position: relative;
-        background: #000; /* Warna dasar di balik gambar */
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: clamp(40px, 8vw, 80px);
-        overflow: hidden;
-    }
-
-    .left::before {
-        content: "";
-        position: absolute;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('/images/bg_login.jpg');
-        background-size: cover;
-        background-position: center;
-        opacity: 0.6; /* Sesuaikan nilai ini (0.0 - 1.0) */
-        z-index: 1;
-    }
-
-    .left > * {
-        position: relative;
-        z-index: 2;
-    }
-
-    .logo img {
-        height: 45px;
-        width: auto;
-    }
-
-    .logo {
-        position: absolute;
-        top: 40px;
-        left: clamp(40px, 8vw, 80px);
-        display: flex;
-        align-items: center;
-    }
-
-    .left h1 {
-        font-size: clamp(32px, 4vw, 48px);
-        font-weight: 800; /* Dibuat Bold */
-        max-width: 500px;
-        line-height: 1.2;
-        margin-bottom: 20px;
-    }
-
-    .left p {
-        max-width: 450px;
-        opacity: 0.9;
-        font-size: clamp(15px, 1.2vw, 18px);
-        line-height: 1.6;
-    }
-
-    /* ================= RIGHT SIDE ================= */
-    .right {
-        flex: 1;
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-        background: #ffffff;
-        padding: clamp(30px, 5vw, 60px);
-        overflow-y: auto; /* Memungkinkan scroll jika layar kecil/pendek */
-    }
-
-    .form-wrapper {
-        width: 100%;
-        max-width: 480px; /* Sedikit dilebarkan untuk menampung form yang lebih banyak */
-        display: flex;
-        flex-direction: column;
-        margin: auto 0; /* Vertikal center yang lebih baik saat ada scroll */
-    }
-
-    .form-wrapper h2 {
-        font-size: clamp(28px, 3vw, 36px);
-        font-weight: 700; /* Dibuat Bold */
-        color: #111;
-        margin-bottom: 8px;
-    }
-
-    .form-wrapper > p {
-        font-size: 15px;
-        color: #666;
-        margin-bottom: 32px;
-        line-height: 1.5;
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 18px; 
-    }
-
-    .input-group {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        position: relative;
-    }
-
-    #seller-demographics[hidden],
-    #seller-gender[hidden] {
-        display: none;
-    }
-
-    .input-group label {
-        font-size: 14px;
-        font-weight: 600;
-        color: #333;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    input[type="number"],
-    select {
-        width: 100%;
-        padding: 14px 16px; 
-        border-radius: 8px;
-        border: 1px solid #d1d5db;
-        font-size: 15px;
-        transition: all 0.2s ease;
-        background: #fcfcfc;
-    }
-
-    input:focus {
-        border-color: #1e5eff;
-        background: #ffffff;
-        outline: none;
-        box-shadow: 0 0 0 4px rgba(30, 94, 255, 0.1);
-    }
-
-    /* --- Custom Radio Buttons --- */
-    .radio-container {
-        display: flex;
-        gap: 15px;
-    }
-
-    .radio-box {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 12px 16px;
-        border: 1px solid #d1d5db;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        background: #fcfcfc;
-    }
-
-    .radio-box:hover {
-        border-color: #1e5eff;
-    }
-
-    .radio-box input[type="radio"] {
-        accent-color: #1e5eff; /* Mengubah warna radio button bawaan browser */
-        width: 18px;
-        height: 18px;
-        cursor: pointer;
-    }
-    .error-msg {
-        color: #d93025;
-        font-size: 13px;
-        margin-top: 10px;
-        line-height: 1.4;
-        display: block;
-    }
-
-    button {
-        width: 100%;
-        padding: 14px 16px; 
-        background: #0d47a1; /* Biru gelap sesuai mockup */
-        color: white;
-        border: none;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.2s ease, transform 0.1s ease;
-        margin-top: 10px;
-    }
-
-    button:hover {
-        background: #0a367a;
-    }
-
-    button:active {
-        transform: scale(0.98);
-    }
-
-    .small {
-        text-align: center;
-        margin-top: 24px;
-        font-size: 14px;
-        color: #555;
-    }
-
-    .small a {
-        color: #0d47a1;
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.2s;
-    }
-
-    .small a:hover {
-        text-decoration: underline;
-    }
-
-    /* Password Show/Hide Styles */
-    .password-wrapper {
-        position: relative;
-        display: flex;
-        align-items: center;
-    }
-
-    .password-wrapper input {
-        padding-right: 45px;
-    }
-
-    .toggle-password {
-        position: absolute;
-        right: 12px;
-        background: none;
-        border: none;
-        padding: 0;
-        margin: 0;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #666;
-        transition: color 0.2s;
-        width: 24px;
-        height: 24px;
-        z-index: 10;
-    }
-
-    .toggle-password:hover {
-        color: #0d47a1;
-        background: transparent !important;
-        opacity: 1 !important;
-    }
-    
-    .toggle-password:hover svg {
-        fill: none !important;
-    }
-    
-    .toggle-password svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    /* 🔥 RESPONSIVE */
-    @media (max-width: 900px) {
-        .container {
-            flex-direction: column;
+        :root {
+            color-scheme: light;
+            font-family: 'Poppins', sans-serif;
+            color: #292b25;
+            background: #fbf9f4;
+            font-synthesis: none;
         }
-
-        .left {
-            flex: none; 
-            padding: 80px 30px 40px; 
+        * { box-sizing: border-box; }
+        body { min-width: 320px; min-height: 100vh; margin: 0; }
+        a { color: inherit; }
+        .page { min-height: 100vh; display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(460px, .92fr); }
+        .story { position: relative; display: flex; min-height: 100vh; flex-direction: column; justify-content: space-between; overflow: hidden; padding: 38px clamp(32px, 6vw, 88px); color: #fff; background: #26402e; }
+        .story::before { position: absolute; inset: 0; content: ''; background: linear-gradient(180deg, rgba(20, 39, 26, .2), rgba(20, 39, 26, .88)), url('{{ asset('images/landing/hero-composition.png') }}') center / cover; }
+        .story > * { position: relative; z-index: 1; }
+        .brand img { display: block; width: 140px; height: auto; filter: brightness(0) invert(1); }
+        .story-copy { max-width: 570px; padding: 70px 0; }
+        .eyebrow { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,.35); border-radius: 999px; padding: 8px 14px; color: #f8ede1; font-size: 12px; font-weight: 600; letter-spacing: .04em; }
+        .eyebrow::before { width: 7px; height: 7px; border-radius: 50%; background: #e9a46e; content: ''; }
+        h1 { margin: 22px 0 14px; font-size: clamp(36px, 4.5vw, 64px); line-height: 1.12; letter-spacing: -.04em; }
+        .story-copy p { max-width: 450px; margin: 0; color: #f4eee2; font-size: 16px; line-height: 1.8; }
+        .story-foot { color: rgba(255,255,255,.75); font-size: 12px; }
+        .form-side { display: grid; place-items: center; padding: 36px clamp(24px, 5vw, 76px); }
+        .form-card { width: min(100%, 460px); }
+        .mobile-brand { display: none; }
+        .back-link { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 22px; color: #647064; font-size: 13px; font-weight: 500; text-decoration: none; }
+        .back-link:hover, .text-link:hover { color: #26402e; text-decoration: underline; }
+        h2 { margin: 0; color: #1e3325; font-size: clamp(30px, 3vw, 38px); line-height: 1.2; letter-spacing: -.035em; }
+        .intro { margin: 10px 0 22px; color: #77786f; font-size: 14px; line-height: 1.7; }
+        .notice { margin: 0 0 16px; border: 1px solid #f1c7bb; border-radius: 12px; background: #fff4f0; padding: 12px 14px; color: #a53d2f; font-size: 13px; line-height: 1.6; }
+        form { display: grid; gap: 14px; }
+        .field { display: grid; gap: 7px; }
+        label, .group-label { color: #41443d; font-size: 13px; font-weight: 600; }
+        input, select { width: 100%; min-height: 48px; border: 1px solid #deded5; border-radius: 12px; outline: 0; background: #fffefa; padding: 0 14px; color: #292b25; font: inherit; font-size: 14px; transition: border-color .2s, box-shadow .2s; }
+        input::placeholder { color: #a2a399; }
+        input:focus, select:focus { border-color: #558257; box-shadow: 0 0 0 4px rgba(85,130,87,.12); }
+        .field-error { color: #b44335; font-size: 12px; }
+        .seller-fields[hidden] { display: none; }
+        .seller-fields { display: grid; gap: 14px; }
+        .radio-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .radio-choice { display: flex; align-items: center; gap: 9px; min-height: 46px; border: 1px solid #deded5; border-radius: 12px; background: #fffefa; padding: 0 12px; color: #51534c; font-size: 13px; font-weight: 500; cursor: pointer; }
+        .radio-choice input { width: 16px; min-height: 16px; height: 16px; margin: 0; accent-color: #345236; }
+        .password-wrap { position: relative; }
+        .password-wrap input { padding-right: 68px; }
+        .show-password { position: absolute; top: 50%; right: 12px; transform: translateY(-50%); border: 0; background: transparent; padding: 7px; color: #558257; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+        .submit { min-height: 52px; margin-top: 4px; border: 0; border-radius: 12px; background: #26402e; color: #fff; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; box-shadow: 0 8px 18px rgba(38,64,46,.16); transition: background .2s, transform .2s; }
+        .submit:hover { transform: translateY(-1px); background: #1e3325; }
+        .divider { display: flex; align-items: center; gap: 14px; margin: 22px 0 16px; color: #999a91; font-size: 12px; }
+        .divider::before, .divider::after { flex: 1; height: 1px; background: #e9e5db; content: ''; }
+        .login-prompt { margin: 0; color: #77786f; text-align: center; font-size: 13px; }
+        .login-prompt a { color: #345236; font-weight: 700; text-decoration: none; }
+        .login-prompt a:hover { text-decoration: underline; }
+        @media (max-width: 800px) {
+            .page { grid-template-columns: 1fr; }
+            .story { display: none; }
+            .form-side { min-height: 100vh; padding: 30px 22px; }
+            .mobile-brand { display: block; margin-bottom: 32px; }
+            .mobile-brand img { width: 128px; height: auto; }
+            .back-link { margin-bottom: 18px; }
         }
-
-        .logo {
-            top: 20px;
-            left: 30px;
+        @media (max-width: 420px) {
+            .form-side { padding: 24px 18px; }
+            .radio-row { grid-template-columns: 1fr; }
         }
-
-        .right {
-            flex: 1; 
-            padding: 40px 30px;
-            overflow-y: visible;
-        }
-    }
     </style>
-    <link href="{{ asset('css/kreva-theme.css') }}" rel="stylesheet">
 </head>
-<body class="kreva-auth">
-
-<div class="container">
-
-    <div class="left">
-        <div class="logo">
-            <img src="{{ asset('images/kreva_logo_white.svg') }}" alt="KREVA Logo">
+<body>
+<main class="page">
+    <section class="story" aria-label="Tentang KREVA">
+        <a class="brand" href="{{ url('/') }}" aria-label="Kembali ke beranda">
+            <img src="{{ asset('images/kreva_logo.svg') }}" alt="KREVA">
+        </a>
+        <div class="story-copy">
+            <span class="eyebrow">Marketplace UMKM Indonesia</span>
+            <h1>Temukan karya.<br>Dukung sesama.</h1>
+            <p>Bergabunglah dengan komunitas yang menghargai cerita dan karya di balik setiap produk lokal.</p>
         </div>
+        <div class="story-foot">© {{ date('Y') }} KREVA · Dukung karya lokal Indonesia</div>
+    </section>
 
-        <h1>Temukan dan Jual Produk UMKM Lokal</h1>
-        <p>
-            Bergabunglah sebagai pembeli untuk menjelajahi produk lokal, atau sebagai penjual untuk menampilkan produk usaha Anda.
-        </p>
-    </div>
-
-    <div class="right">
-        <div class="form-wrapper">
-
-            <h2>Buat Akun KREVA</h2>
-            <p>Pilih jenis akun sesuai cara Anda menggunakan marketplace UMKM.</p>
+    <section class="form-side">
+        <div class="form-card">
+            <a class="mobile-brand" href="{{ url('/') }}" aria-label="Kembali ke beranda">
+                <img src="{{ asset('images/kreva_logo.svg') }}" alt="KREVA">
+            </a>
+            <a class="back-link" href="{{ url('/') }}"><span aria-hidden="true">←</span> Kembali ke beranda</a>
+            <h2>Buat akun KREVA</h2>
+            <p class="intro">Daftar sebagai pembeli atau penjual dan mulai jelajahi produk lokal.</p>
 
             @if (session('database_error'))
-                <div role="alert" class="error-msg">{{ session('database_error') }}</div>
+                <div class="notice" role="alert">{{ session('database_error') }}</div>
+            @endif
+            @if ($errors->any())
+                <div class="notice" role="alert">{{ $errors->first() }}</div>
             @endif
 
-            <form method="POST" action="{{ route('register') }}">
+            <form method="POST" action="{{ route('register.store') }}">
                 @csrf
-
-                <div class="input-group">
+                <div class="field">
                     <label for="nama_user">Username</label>
-                    <input type="text" id="nama_user" name="nama_user" placeholder="Masukkan username Anda" value="{{ old('nama_user') }}" required>
-                    @error('nama_user') <span class="error-msg">{{ $message }}</span> @enderror
+                    <input type="text" id="nama_user" name="nama_user" value="{{ old('nama_user') }}" placeholder="Buat username Anda" maxlength="100" autocomplete="username" required autofocus>
+                    @error('nama_user') <span class="field-error">{{ $message }}</span> @enderror
                 </div>
 
-                <div class="input-group">
-                    <label for="account_type">Daftar sebagai</label>
+                <div class="field">
+                    <label for="account_type">Saya ingin bergabung sebagai</label>
                     <select id="account_type" name="account_type" required>
-                        <option value="buyer" {{ old('account_type', request('account_type', 'buyer')) === 'buyer' ? 'selected' : '' }}>Pembeli UMKM</option>
-                        <option value="seller" {{ old('account_type', request('account_type')) === 'seller' ? 'selected' : '' }}>Penjual UMKM</option>
+                        <option value="buyer" {{ old('account_type', request('account_type', 'seller')) === 'buyer' ? 'selected' : '' }}>Pembeli — menjelajahi produk lokal</option>
+                        <option value="seller" {{ old('account_type', request('account_type', 'seller')) === 'seller' ? 'selected' : '' }}>Penjual — menawarkan produk lokal</option>
                     </select>
-                    @error('account_type') <span class="error-msg">{{ $message }}</span> @enderror
+                    @error('account_type') <span class="field-error">{{ $message }}</span> @enderror
                 </div>
 
-                <div class="input-group" id="seller-demographics" hidden>
-                    <label for="age">Umur</label>
-                    <input type="number" id="age" name="age" min="13" max="120" placeholder="Masukkan Umur Anda" value="{{ old('age') }}">
-                    @error('age') <span class="error-msg">{{ $message }}</span> @enderror
-                </div>
-
-                <div class="input-group" id="seller-gender" hidden>
-                    <label>Jenis Kelamin</label>
-                    <div class="radio-container">
-                        <label class="radio-box">
-                            <input type="radio" name="gender" value="2" {{ old('gender') == '2' ? 'checked' : '' }}>
-                            Laki-laki
-                        </label>
-                        <label class="radio-box">
-                            <input type="radio" name="gender" value="1" {{ old('gender') == '1' ? 'checked' : '' }}>
-                            Perempuan
-                        </label>
+                <div class="seller-fields" id="seller-fields" hidden>
+                    <div class="field">
+                        <label for="age">Umur</label>
+                        <input type="number" id="age" name="age" min="13" max="120" value="{{ old('age') }}" placeholder="Umur (minimal 13 tahun)" inputmode="numeric">
+                        @error('age') <span class="field-error">{{ $message }}</span> @enderror
                     </div>
-                    @error('gender') <span class="error-msg">{{ $message }}</span> @enderror
-                </div>
-
-                <div class="input-group" x-data="{ show: false }">
-                    <label for="password">Password</label>
-                    <div class="password-wrapper">
-                        <input type="password" :type="show ? 'text' : 'password'" id="password" name="password" placeholder="Minimal 8 karakter" required>
-                        <button type="button" class="toggle-password" @click="show = !show">
-                            <svg x-show="!show" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                            </svg>
-                            <svg x-show="show" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="display: none;">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.822 7.822L21 21m-2.278-2.278-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
-                            </svg>
-                        </button>
-                    </div>
-                    @error('password') <span class="error-msg">{{ $message }}</span> @enderror
-                </div>
-
-                <div class="input-group" x-data="{ show: false }">
-                    <label for="password_confirmation">Konfirmasi Password</label>
-                    <div class="password-wrapper">
-                        <input type="password" :type="show ? 'text' : 'password'" id="password_confirmation" name="password_confirmation" placeholder="Ulangi password Anda" required>
-                        <button type="button" class="toggle-password" @click="show = !show">
-                            <svg x-show="!show" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                            </svg>
-                            <svg x-show="show" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="display: none;">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 0 0 1.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.451 10.451 0 0 1 12 4.5c4.756 0 8.773 3.162 10.065 7.498a10.522 10.522 0 0 1-4.293 5.774M6.228 6.228 3 3m3.228 3.228 3.65 3.65m7.822 7.822L21 21m-2.278-2.278-3.65-3.65m0 0a3 3 0 1 0-4.243-4.243m4.242 4.242L9.88 9.88" />
-                            </svg>
-                        </button>
+                    <div class="field">
+                        <span class="group-label">Jenis kelamin</span>
+                        <div class="radio-row">
+                            <label class="radio-choice">
+                                <input type="radio" name="gender" value="2" {{ old('gender') == '2' ? 'checked' : '' }}>
+                                Laki-laki
+                            </label>
+                            <label class="radio-choice">
+                                <input type="radio" name="gender" value="1" {{ old('gender') == '1' ? 'checked' : '' }}>
+                                Perempuan
+                            </label>
+                        </div>
+                        @error('gender') <span class="field-error">{{ $message }}</span> @enderror
                     </div>
                 </div>
 
-                <button type="submit">Daftar</button>
+                <div class="field">
+                    <label for="password">Kata sandi</label>
+                    <div class="password-wrap">
+                        <input type="password" id="password" name="password" placeholder="Minimal 8 karakter" autocomplete="new-password" required>
+                        <button class="show-password" type="button" data-password-toggle="password" aria-label="Tampilkan kata sandi">Lihat</button>
+                    </div>
+                    @error('password') <span class="field-error">{{ $message }}</span> @enderror
+                </div>
+
+                <div class="field">
+                    <label for="password_confirmation">Ulangi kata sandi</label>
+                    <div class="password-wrap">
+                        <input type="password" id="password_confirmation" name="password_confirmation" placeholder="Masukkan kata sandi yang sama" autocomplete="new-password" required>
+                        <button class="show-password" type="button" data-password-toggle="password_confirmation" aria-label="Tampilkan konfirmasi kata sandi">Lihat</button>
+                    </div>
+                </div>
+
+                <button class="submit" type="submit">Buat akun</button>
             </form>
 
-            <div class="small">
-                Sudah punya akun?
-                <a href="{{ route('login') }}">Masuk</a>
-            </div>
-            <div class="small" style="margin-top: 12px;">
-                <a href="{{ route('register', ['account_type' => 'seller']) }}">Daftar sebagai Penjual</a>
-                &nbsp;·&nbsp;
-                <a href="{{ route('register', ['account_type' => 'buyer']) }}">Daftar sebagai Pembeli</a>
-            </div>
-
+            <div class="divider">Sudah punya akun?</div>
+            <p class="login-prompt">Silakan <a href="{{ route('login') }}">masuk di sini</a></p>
         </div>
-    </div>
-
-</div>
-
+    </section>
+</main>
 <script>
     const accountType = document.getElementById('account_type');
-    const sellerDemographics = document.getElementById('seller-demographics');
-    const sellerGender = document.getElementById('seller-gender');
-    const sellerAgeInput = document.getElementById('age');
-    const sellerGenderInputs = sellerGender.querySelectorAll('input[name="gender"]');
+    const sellerFields = document.getElementById('seller-fields');
+    const ageInput = document.getElementById('age');
+    const genderInputs = sellerFields.querySelectorAll('input[name="gender"]');
 
     function updateSellerFields() {
         const isSeller = accountType.value === 'seller';
-        sellerDemographics.hidden = !isSeller;
-        sellerGender.hidden = !isSeller;
-        sellerAgeInput.required = isSeller;
-        sellerGenderInputs.forEach((input) => { input.required = isSeller; });
+        sellerFields.hidden = !isSeller;
+        ageInput.required = isSeller;
+        genderInputs.forEach((input) => { input.required = isSeller; });
     }
 
     accountType.addEventListener('change', updateSellerFields);
     updateSellerFields();
-</script>
 
+    document.querySelectorAll('[data-password-toggle]').forEach((button) => {
+        button.addEventListener('click', () => {
+            const input = document.getElementById(button.dataset.passwordToggle);
+            const visible = input.type === 'password';
+            input.type = visible ? 'text' : 'password';
+            button.textContent = visible ? 'Sembunyi' : 'Lihat';
+            button.setAttribute('aria-label', visible ? 'Sembunyikan kata sandi' : 'Tampilkan kata sandi');
+        });
+    });
+</script>
 </body>
 </html>

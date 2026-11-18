@@ -3,6 +3,12 @@
 @section('title', 'Katalog Produk')
 
 @section('content')
+    @if (session('database_error'))
+        <div role="alert" class="mb-6 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">{{ session('database_error') }}</div>
+    @endif
+    @if ($errors->any())
+        <div role="alert" class="mb-6 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{{ $errors->first() }}</div>
+    @endif
     <section class="mb-8 rounded-3xl bg-[#26402e] px-6 py-8 text-white sm:px-10 sm:py-12">
         <p class="mb-2 text-sm font-semibold uppercase tracking-wider text-green-200">Dukung usaha lokal</p>
         <h1 class="text-3xl font-bold sm:text-4xl">Produk pilihan dari UMKM Indonesia</h1>
@@ -15,11 +21,25 @@
         </div>
     @endif
 
-    <form method="GET" action="{{ route('marketplace.index') }}" class="mb-6 flex flex-col gap-3 sm:flex-row">
-        <label for="q" class="sr-only">Cari produk</label>
-        <input id="q" name="q" type="search" value="{{ request('q') }}" placeholder="Cari nama, kategori, atau deskripsi produk"
-            class="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-sm focus:border-[#558257] focus:outline-none focus:ring-2 focus:ring-green-100">
-        <button type="submit" class="rounded-xl bg-[#26402e] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1e3325]">Cari Produk</button>
+    <form method="GET" action="{{ route('marketplace.index') }}" class="mb-6 grid gap-3 sm:grid-cols-[minmax(0,1fr)_minmax(12rem,0.6fr)_auto]">
+        <div>
+            <label for="q" class="sr-only">Cari produk</label>
+            <input id="q" name="q" type="search" value="{{ request('q') }}" placeholder="Cari nama atau deskripsi produk"
+                class="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-sm focus:border-[#558257] focus:outline-none focus:ring-2 focus:ring-green-100">
+        </div>
+        <div>
+            <label for="category_id" class="sr-only">Pilih kategori</label>
+            <select id="category_id" name="category_id"
+                class="w-full rounded-xl border border-stone-300 bg-white px-4 py-3 text-sm focus:border-[#558257] focus:outline-none focus:ring-2 focus:ring-green-100">
+                <option value="">Semua kategori</option>
+                @foreach ($categories as $category)
+                    <option value="{{ $category->id }}" @selected((string) request('category_id') === (string) $category->id)>
+                        {{ $category->name }}
+                    </option>
+                @endforeach
+            </select>
+        </div>
+        <button type="submit" class="rounded-xl bg-[#26402e] px-6 py-3 text-sm font-semibold text-white hover:bg-[#1e3325]">Tampilkan</button>
     </form>
 
     @if ($products->isEmpty())
@@ -31,22 +51,44 @@
         <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             @foreach ($products as $product)
                 <article class="flex flex-col rounded-2xl border border-stone-200 bg-white p-5 shadow-sm">
-                    <div class="mb-4 flex h-36 items-center justify-center rounded-xl bg-[#f3f0e8] text-4xl" aria-hidden="true">🛍️</div>
-                    <p class="text-xs font-semibold uppercase tracking-wide text-[#558257]">{{ $product->kategori }}</p>
-                    <h2 class="mt-1 text-lg font-bold text-stone-900">{{ $product->nama_produk }}</h2>
-                    <p class="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-stone-600">{{ $product->deskripsi ?: 'Produk lokal pilihan dari pelaku UMKM.' }}</p>
-                    <p class="mt-4 text-lg font-bold text-[#26402e]">Rp {{ number_format((float) $product->harga, 0, ',', '.') }}</p>
-                    <div class="mt-2 flex items-center justify-between border-t border-stone-100 pt-3 text-xs text-stone-500">
-                        <span>{{ $product->seller?->nama_user ?? 'Penjual UMKM' }}</span>
-                        <span>{{ $product->stok > 0 ? 'Stok '.$product->stok : 'Stok habis' }}</span>
+                    <div class="mb-4 flex h-44 items-center justify-center overflow-hidden rounded-xl bg-[#f3f0e8]">
+                        @if ($product->images->isNotEmpty())
+                            <img src="{{ $product->images->first()->url }}" alt="Foto {{ $product->name }}" class="h-full w-full object-cover">
+                        @else
+                            <span class="text-4xl" aria-hidden="true">🛍️</span>
+                        @endif
                     </div>
-                    @if ($product->stok > 0)
-                        <form method="POST" action="{{ route('cart.items.store') }}" class="mt-4">
-                            @csrf
-                            <input type="hidden" name="product_id" value="{{ $product->id_produk }}">
-                            <input type="hidden" name="quantity" value="1">
-                            <button type="submit" class="w-full rounded-xl bg-[#26402e] px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#1e3325]">Tambah ke Keranjang</button>
-                        </form>
+                    <p class="text-xs font-semibold uppercase tracking-wide text-[#558257]">{{ $product->category?->name }}</p>
+                    <h2 class="mt-1 text-lg font-bold text-stone-900">{{ $product->name }}</h2>
+                    <p class="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-stone-600">{{ $product->description ?: 'Produk lokal pilihan dari pelaku UMKM.' }}</p>
+                    <p class="mt-4 text-lg font-bold text-[#26402e]">Rp {{ number_format((float) $product->price_min, 0, ',', '.') }}</p>
+                    <div class="mt-2 flex items-center justify-between border-t border-stone-100 pt-3 text-xs text-stone-500">
+                        <span>{{ $product->store?->name ?? 'Penjual UMKM' }}</span>
+                        <span>{{ $product->variants_sum_stock > 0 ? 'Stok '.$product->variants_sum_stock : 'Stok habis' }}</span>
+                    </div>
+                    @if ($product->variants->isNotEmpty())
+                        @auth
+                            @if (auth()->user()->account_type === 'buyer')
+                                <form method="POST" action="{{ route('cart.items.store') }}" class="mt-4 space-y-3">
+                                    @csrf
+                                    <label for="variant-{{ $product->id }}" class="block text-xs font-semibold text-stone-600">Pilih varian</label>
+                                    <select id="variant-{{ $product->id }}" name="variant_id" required class="w-full rounded-lg border border-stone-300 px-3 py-2 text-sm">
+                                        @foreach ($product->variants as $variant)
+                                            <option value="{{ $variant->id }}">{{ $variant->label ?: 'Default' }} · Rp {{ number_format($variant->price, 0, ',', '.') }} · stok {{ $variant->stock }}</option>
+                                        @endforeach
+                                    </select>
+                                    <input type="hidden" name="qty" value="1">
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <button type="submit" class="rounded-xl border border-[#26402e] px-3 py-2.5 text-xs font-semibold text-[#26402e] hover:bg-green-50">Masukkan ke keranjang</button>
+                                        <button type="submit" formaction="{{ route('checkout.buy-now') }}" class="rounded-xl bg-[#26402e] px-3 py-2.5 text-xs font-semibold text-white hover:bg-[#1e3325]">Beli langsung</button>
+                                    </div>
+                                </form>
+                            @endif
+                        @else
+                            <a href="{{ route('login') }}" class="mt-4 inline-flex w-full justify-center rounded-xl bg-[#26402e] px-3 py-2.5 text-sm font-semibold text-white hover:bg-[#1e3325]">Masuk untuk membeli</a>
+                        @endauth
+                    @else
+                        <p class="mt-4 rounded-xl bg-stone-100 px-3 py-2.5 text-center text-sm font-medium text-stone-500">Stok habis</p>
                     @endif
                 </article>
             @endforeach

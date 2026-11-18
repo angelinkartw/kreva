@@ -640,22 +640,22 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
                     @foreach ($featuredProducts as $product)
                         <article class="group overflow-hidden rounded-2xl border border-[#ede7db] bg-white shadow-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
-                                 x-show="!searchQuery || @js($product->nama_produk.' '.$product->kategori).toLowerCase().includes(searchQuery.toLowerCase())">
-                            <div class="flex aspect-[4/3] items-center justify-center bg-[#f3f0e8] text-5xl" aria-hidden="true">🛍️</div>
+                                 x-show="!searchQuery || @js($product->name.' '.$product->category?->name).toLowerCase().includes(searchQuery.toLowerCase())">
+                            <div class="flex aspect-[4/3] items-center justify-center overflow-hidden bg-[#f3f0e8]">
+                                @if ($product->images->isNotEmpty())
+                                    <img src="{{ $product->images->first()->url }}" alt="Foto {{ $product->name }}" class="h-full w-full object-cover">
+                                @else
+                                    <span class="text-5xl" aria-hidden="true">🛍️</span>
+                                @endif
+                            </div>
                             <div class="p-4">
-                                <p class="text-xs font-semibold uppercase tracking-wide text-kreva-600">{{ $product->kategori }}</p>
-                                <h3 class="mt-1 truncate text-sm font-bold text-stone-900 transition group-hover:text-kreva-800 sm:text-base">{{ $product->nama_produk }}</h3>
-                                <p class="mt-2 text-sm font-bold text-kreva-900">Rp {{ number_format((float) $product->harga, 0, ',', '.') }}</p>
+                                <p class="text-xs font-semibold uppercase tracking-wide text-kreva-600">{{ $product->category?->name }}</p>
+                                <h3 class="mt-1 truncate text-sm font-bold text-stone-900 transition group-hover:text-kreva-800 sm:text-base">{{ $product->name }}</h3>
+                                <p class="mt-2 text-sm font-bold text-kreva-900">Rp {{ number_format((float) $product->price_min, 0, ',', '.') }}</p>
                                 <div class="mt-3 flex items-center justify-between border-t border-stone-100 pt-3 text-xs text-stone-500">
-                                    <span>{{ $product->seller?->nama_user ?? 'Penjual UMKM' }}</span>
-                                    <span>Stok {{ $product->stok }}</span>
+                                    <span>{{ $product->store?->name ?? 'Penjual UMKM' }}</span>
+                                    <span>Stok {{ $product->variants_sum_stock }}</span>
                                 </div>
-                                <form method="POST" action="{{ route('cart.items.store') }}" class="mt-4">
-                                    @csrf
-                                    <input type="hidden" name="product_id" value="{{ $product->id_produk }}">
-                                    <input type="hidden" name="quantity" value="1">
-                                    <button type="submit" class="w-full rounded-xl bg-kreva-800 px-4 py-2.5 text-sm font-semibold text-white hover:bg-kreva-900">Tambah ke Keranjang</button>
-                                </form>
                             </div>
                         </article>
                     @endforeach
@@ -706,7 +706,7 @@
 
                     <!-- Right Artisan Illustration/Photo inside banner -->
                     <div class="absolute right-0 bottom-0 top-0 w-2/5 sm:w-1/3 flex items-end justify-end pointer-events-none">
-                        <img src="{{ asset('images/landing/banner-umkm.png') }}"
+                        <img src="{{ asset('images/craft2.jpg') }}"
                              alt="Pelaku UMKM Indonesia"
                              class="h-full w-auto object-cover object-left-bottom">
                     </div>
@@ -745,7 +745,7 @@
 
                     <!-- Right Survey Clipboard graphic inside banner -->
                     <div class="absolute right-2 bottom-0 top-0 w-1/3 sm:w-2/5 flex items-end justify-end pointer-events-none">
-                        <img src="{{ asset('images/landing/banner-survey.png') }}"
+                        <img src="{{ asset('images/survey.jpg') }}"
                              alt="KREVA Survey"
                              class="h-[88%] w-auto object-contain object-bottom-right">
                     </div>

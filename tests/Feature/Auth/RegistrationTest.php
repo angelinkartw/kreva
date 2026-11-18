@@ -3,7 +3,8 @@
 test('registration screen can be rendered', function () {
     $response = $this->get('/register');
 
-    $response->assertStatus(200);
+    $response->assertStatus(200)
+        ->assertSee('value="seller" selected', false);
 });
 
 test('new users can register', function () {
@@ -35,6 +36,12 @@ test('new sellers can register and are sent to their product dashboard', functio
 
     $this->assertAuthenticated();
     $response->assertRedirect(route('seller.dashboard', absolute: false));
+
+    $this->get(route('seller.dashboard'))
+        ->assertOk()
+        ->assertSee('BERANDA PENJUAL')
+        ->assertSee('Halo, testseller!')
+        ->assertSee('Akun penjualmu sudah aktif.');
     $this->assertDatabaseHas('users', [
         'nama_user' => 'testseller',
         'account_type' => 'seller',

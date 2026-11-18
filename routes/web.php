@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\CartController;
+use App\Http\Controllers\BuyerCommerceController;
+use App\Http\Controllers\FakePaymentController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Product;
@@ -14,9 +15,11 @@ Route::get('/', function () {
 
     try {
         $featuredProducts = Product::query()
-            ->with('seller')
-            ->where('stok', '>', 0)
-            ->latest()
+            ->visible()
+            ->with(['category', 'store.owner', 'images'])
+            ->withSum('variants', 'stock')
+            ->whereHas('variants', fn ($query) => $query->where('stock', '>', 0))
+            ->latest('products.created_at')
             ->limit(4)
             ->get();
     } catch (QueryException $exception) {
@@ -33,16 +36,19 @@ Route::get('/', function () {
 
 Route::get('/marketplace', [ProductController::class, 'index'])->name('marketplace.index');
 
-Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
-Route::post('/cart/items', [CartController::class, 'add'])->name('cart.items.store');
-Route::put('/cart/items/{product}', [CartController::class, 'update'])->name('cart.items.update');
-Route::delete('/cart/items/{product}', [CartController::class, 'remove'])->name('cart.items.remove');
-
 Route::middleware(['auth', 'account.type:buyer'])->group(function () {
-    Route::get('/checkout', [CartController::class, 'checkout'])->name('checkout.create');
-    Route::post('/checkout', [CartController::class, 'placeOrder'])->name('checkout.store');
-    Route::get('/buyer/orders', [CartController::class, 'orders'])->name('buyer.orders.index');
-    Route::get('/buyer/orders/{order}', [CartController::class, 'showOrder'])->name('buyer.orders.show');
+    Route::get('/cart', [BuyerCommerceController::class, 'index'])->name('cart.index');
+    Route::post('/cart/items', [BuyerCommerceController::class, 'add'])->name('cart.items.store');
+    Route::put('/cart/items/{item}', [BuyerCommerceController::class, 'update'])->name('cart.items.update');
+    Route::delete('/cart/items/{item}', [BuyerCommerceController::class, 'remove'])->name('cart.items.remove');
+    Route::post('/checkout/buy-now', [BuyerCommerceController::class, 'buyNow'])->name('checkout.buy-now');
+    Route::get('/checkout', [BuyerCommerceController::class, 'checkout'])->name('checkout.create');
+    Route::post('/checkout/address', [BuyerCommerceController::class, 'storeAddress'])->name('checkout.addresses.store');
+    Route::post('/checkout', [BuyerCommerceController::class, 'placeOrder'])->name('checkout.store');
+    Route::get('/buyer/payments/{code}/fake', [FakePaymentController::class, 'show'])->name('buyer.fake-payment.show');
+    Route::post('/buyer/payments/{code}/fake', [FakePaymentController::class, 'pay'])->name('buyer.fake-payment.pay');
+    Route::get('/buyer/orders', [BuyerCommerceController::class, 'orders'])->name('buyer.orders.index');
+    Route::get('/buyer/orders/{order}', [BuyerCommerceController::class, 'showOrder'])->name('buyer.orders.show');
 });
 
 Route::middleware(['auth', 'account.type:buyer'])->prefix('buyer')->name('buyer.')->group(function () {

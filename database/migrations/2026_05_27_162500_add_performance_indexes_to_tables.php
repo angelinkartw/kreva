@@ -11,40 +11,39 @@ return new class extends Migration
      */
     public function up(): void
     {
-        foreach (['assessments', 'umkm', 'users', 'responses'] as $tableName) {
+        $indexes = [
+            'assessments' => [
+                [['id_umkm', 'status', 'created_at'], 'idx_assessments_umkm_status_created'],
+                [['id_umkm'], 'idx_assessments_id_umkm'],
+            ],
+            'umkm' => [
+                [['industry'], 'idx_umkm_industry'],
+                [['usia_usaha'], 'idx_umkm_usia_usaha'],
+                [['id_user'], 'idx_umkm_id_user'],
+            ],
+            'users' => [
+                [['id_umkm', 'role'], 'idx_users_umkm_role'],
+            ],
+            'responses' => [
+                [['id_assessment', 'id_user'], 'idx_responses_assessment_user'],
+            ],
+        ];
+
+        foreach ($indexes as $tableName => $tableIndexes) {
             if (! Schema::hasTable($tableName)) {
-                return;
+                continue;
+            }
+
+            foreach ($tableIndexes as [$columns, $indexName]) {
+                if (! Schema::hasColumns($tableName, $columns) || Schema::hasIndex($tableName, $indexName)) {
+                    continue;
+                }
+
+                Schema::table($tableName, function (Blueprint $table) use ($columns, $indexName) {
+                    $table->index($columns, $indexName);
+                });
             }
         }
-
-        // Index untuk tabel assessments
-        Schema::table('assessments', function (Blueprint $table) {
-            // Index kombinasi untuk pencarian spesifik dan sorting (DashboardController)
-            $table->index(['id_umkm', 'status', 'created_at'], 'idx_assessments_umkm_status_created');
-            // Index untuk join dengan UMKM dan agregasi
-            $table->index('id_umkm', 'idx_assessments_id_umkm');
-        });
-
-        // Index untuk tabel umkm
-        Schema::table('umkm', function (Blueprint $table) {
-            // Index untuk agregasi group by industry & usia_usaha
-            $table->index('industry', 'idx_umkm_industry');
-            $table->index('usia_usaha', 'idx_umkm_usia_usaha');
-            // Index untuk relasi
-            $table->index('id_user', 'idx_umkm_id_user');
-        });
-
-        // Index untuk tabel users
-        Schema::table('users', function (Blueprint $table) {
-            // Index kombinasi untuk menghitung jumlah karyawan per UMKM
-            $table->index(['id_umkm', 'role'], 'idx_users_umkm_role');
-        });
-
-        // Index untuk tabel responses
-        Schema::table('responses', function (Blueprint $table) {
-            // Index untuk pengecekan "hasSubmitted" dan aggregasi per assessment
-            $table->index(['id_assessment', 'id_user'], 'idx_responses_assessment_user');
-        });
     }
 
     /**
@@ -52,29 +51,25 @@ return new class extends Migration
      */
     public function down(): void
     {
-        foreach (['assessments', 'umkm', 'users', 'responses'] as $tableName) {
+        $indexes = [
+            'assessments' => ['idx_assessments_umkm_status_created', 'idx_assessments_id_umkm'],
+            'umkm' => ['idx_umkm_industry', 'idx_umkm_usia_usaha', 'idx_umkm_id_user'],
+            'users' => ['idx_users_umkm_role'],
+            'responses' => ['idx_responses_assessment_user'],
+        ];
+
+        foreach ($indexes as $tableName => $indexNames) {
             if (! Schema::hasTable($tableName)) {
-                return;
+                continue;
+            }
+
+            foreach ($indexNames as $indexName) {
+                if (Schema::hasIndex($tableName, $indexName)) {
+                    Schema::table($tableName, function (Blueprint $table) use ($indexName) {
+                        $table->dropIndex($indexName);
+                    });
+                }
             }
         }
-
-        Schema::table('assessments', function (Blueprint $table) {
-            $table->dropIndex('idx_assessments_umkm_status_created');
-            $table->dropIndex('idx_assessments_id_umkm');
-        });
-
-        Schema::table('umkm', function (Blueprint $table) {
-            $table->dropIndex('idx_umkm_industry');
-            $table->dropIndex('idx_umkm_usia_usaha');
-            $table->dropIndex('idx_umkm_id_user');
-        });
-
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropIndex('idx_users_umkm_role');
-        });
-
-        Schema::table('responses', function (Blueprint $table) {
-            $table->dropIndex('idx_responses_assessment_user');
-        });
     }
 };

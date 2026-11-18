@@ -19,12 +19,12 @@
                     <a href="{{ route('buyer.orders.show', $order) }}" class="block rounded-2xl border border-stone-200 bg-white p-5 hover:border-[#558257]">
                         <div class="flex flex-wrap items-center justify-between gap-3">
                             <div>
-                                <p class="font-bold text-stone-900">Pesanan #{{ $order->id_order }}</p>
-                                <p class="mt-1 text-sm text-stone-500">{{ $order->created_at?->format('d M Y, H:i') }} · {{ $order->items->count() }} produk</p>
+                                <p class="font-bold text-stone-900">Pesanan {{ $order->code }}</p>
+                                <p class="mt-1 text-sm text-stone-500">{{ $order->created_at?->format('d M Y, H:i') }} · {{ $order->storeOrders->sum(fn ($storeOrder) => $storeOrder->items->count()) }} produk</p>
                             </div>
                             <div class="text-right">
-                                <p class="text-sm font-semibold capitalize text-[#416743]">{{ $order->status }}</p>
-                                <p class="mt-1 font-bold text-[#26402e]">Rp {{ number_format((float) $order->total, 0, ',', '.') }}</p>
+                                <p class="text-sm font-semibold text-[#416743]">{{ $order->status->label() }}</p>
+                                <p class="mt-1 font-bold text-[#26402e]">Rp {{ number_format($order->total_paid, 0, ',', '.') }}</p>
                             </div>
                         </div>
                     </a>
