@@ -28,6 +28,7 @@ KREVA menyediakan katalog produk UMKM dan pengelolaan produk untuk penjual.
 - Daftar melalui `/register` sebagai **Pembeli UMKM** atau **Penjual UMKM**.
 - Pembeli dapat melihat produk terbaru di beranda, mencari produk di `/marketplace`, mengelola keranjang di `/cart`, dan checkout ke `/checkout` untuk membuat pesanan berstatus menunggu konfirmasi.
 - Penjual dapat mengelola produk sendiri di `/seller/products`; produk yang tersedia otomatis tampil di beranda dan katalog.
+- Dari halaman detail setiap produk, pembeli dapat bertanya kepada asisten AI berdasarkan informasi produk tersebut atau mengirim pesan langsung ke penjual. Atur `OPENAI_API_KEY` dan (opsional) `OPENAI_MODEL` di `.env`. Informasi produk dan isi percakapan AI dikirim ke OpenAI; jangan masukkan informasi rahasia ke data produk atau chat.
 - Atur koneksi database melalui variabel `DB_*` di `.env`, lalu jalankan `php artisan migrate` untuk membuat skema akun dan produk. Di Railway, hubungkan host dan kredensial MySQL internal ke variabel `MYSQLHOST`, `MYSQLPORT`, `MYSQLDATABASE`, `MYSQLUSER`, dan `MYSQLPASSWORD` pada layanan aplikasi; konfigurasi memprioritaskan variabel ini jika tersedia.
 
 ## Learning Laravel

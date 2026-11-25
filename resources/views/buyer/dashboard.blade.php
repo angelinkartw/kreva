@@ -45,15 +45,15 @@
             <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
                 @foreach ($products as $product)
                     <article class="flex flex-col rounded-2xl border border-stone-200 bg-white p-5 shadow-sm">
-                        <div class="mb-4 flex h-36 items-center justify-center overflow-hidden rounded-xl bg-[#f3f0e8]">
+                        <a href="{{ route('products.show', ['slug' => $product->slug]) }}" aria-label="Lihat detail {{ $product->name }}" class="mb-4 flex h-36 items-center justify-center overflow-hidden rounded-xl bg-[#f3f0e8]">
                             @if ($product->images->isNotEmpty())
                                 <img src="{{ $product->images->first()->url }}" alt="Foto {{ $product->name }}" class="h-full w-full object-cover">
                             @else
                                 <span class="text-4xl" aria-hidden="true">🛍️</span>
                             @endif
-                        </div>
+                        </a>
                         <p class="text-xs font-semibold uppercase tracking-wide text-[#558257]">{{ $product->category?->name }}</p>
-                        <h3 class="mt-1 text-lg font-bold text-stone-900">{{ $product->name }}</h3>
+                        <h3 class="mt-1 text-lg font-bold text-stone-900"><a href="{{ route('products.show', ['slug' => $product->slug]) }}" class="hover:text-[#416743]">{{ $product->name }}</a></h3>
                         <p class="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-stone-600">{{ $product->description ?: 'Produk lokal pilihan dari pelaku UMKM.' }}</p>
                         <p class="mt-4 text-lg font-bold text-[#26402e]">Rp {{ number_format((float) $product->price_min, 0, ',', '.') }}</p>
                         <div class="mt-2 flex items-center justify-between border-t border-stone-100 pt-3 text-xs text-stone-500">

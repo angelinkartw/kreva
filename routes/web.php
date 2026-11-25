@@ -1,10 +1,13 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Buyer\AiProductChatController;
+use App\Http\Controllers\Buyer\BuyerProductChatController;
 use App\Http\Controllers\BuyerCommerceController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FakePaymentController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Seller\SellerProductChatController;
 use App\Models\Product;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Log;
@@ -35,6 +38,7 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/marketplace', [ProductController::class, 'index'])->name('marketplace.index');
+Route::get('/products/{slug}', [ProductController::class, 'show'])->name('products.show');
 
 Route::middleware(['auth', 'account.type:buyer'])->group(function () {
     Route::get('/cart', [BuyerCommerceController::class, 'index'])->name('cart.index');
@@ -53,10 +57,19 @@ Route::middleware(['auth', 'account.type:buyer'])->group(function () {
 
 Route::middleware(['auth', 'account.type:buyer'])->prefix('buyer')->name('buyer.')->group(function () {
     Route::get('/dashboard', [ProductController::class, 'buyerDashboard'])->name('dashboard');
+    Route::post('/products/{slug}/chats', [BuyerProductChatController::class, 'start'])->name('products.chats.store');
+    Route::post('/products/{slug}/ai-chat', [AiProductChatController::class, 'reply'])->name('products.ai-chat.reply');
+    Route::delete('/products/{slug}/ai-chat', [AiProductChatController::class, 'clear'])->name('products.ai-chat.clear');
+    Route::get('/chats', [BuyerProductChatController::class, 'index'])->name('chats.index');
+    Route::get('/chats/{conversation}', [BuyerProductChatController::class, 'show'])->name('chats.show');
+    Route::post('/chats/{conversation}/messages', [BuyerProductChatController::class, 'send'])->name('chats.messages.store');
 });
 
 Route::middleware(['auth', 'account.type:seller', 'non.employee'])->prefix('seller')->name('seller.')->group(function () {
     Route::get('/dashboard', [ProductController::class, 'dashboard'])->name('dashboard');
+    Route::get('/chats', [SellerProductChatController::class, 'index'])->name('chats.index');
+    Route::get('/chats/{conversation}', [SellerProductChatController::class, 'show'])->name('chats.show');
+    Route::post('/chats/{conversation}/messages', [SellerProductChatController::class, 'send'])->name('chats.messages.store');
 
     Route::prefix('products')->name('products.')->group(function () {
         Route::get('/', [ProductController::class, 'manage'])->name('index');

@@ -51,6 +51,11 @@ class Product extends Model
         return $this->hasMany(ProductImage::class)->orderBy('sort_order');
     }
 
+    public function conversations(): HasMany
+    {
+        return $this->hasMany(ProductConversation::class);
+    }
+
     public function scopeVisible(Builder $query): Builder
     {
         return $query->where('products.status', 'active')

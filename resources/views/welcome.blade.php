@@ -417,7 +417,6 @@
                 <a href="{{ url('/') }}" class="block px-3 py-2 rounded-xl text-kreva-900 bg-[#ede6d5] font-semibold">Beranda</a>
                 <a href="#kategori" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-stone-700 hover:bg-stone-100">Kategori</a>
                 <a href="{{ route('marketplace.index') }}" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-stone-700 hover:bg-stone-100">Katalog Produk UMKM</a>
-                <a href="#penjual" @click="mobileMenuOpen = false" class="block px-3 py-2 rounded-xl text-stone-700 hover:bg-stone-100">Toko Terpilih</a>
                 @auth
                     @if (Auth::user()->account_type === 'seller')
                         @if (Auth::user()->role !== 'employee')
@@ -442,48 +441,36 @@
 
 
     <!-- ================= HERO SECTION ================= -->
-    <section id="beranda" class="relative overflow-hidden pt-6 pb-12 md:pt-10 md:pb-16 lg:pb-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-                
-                <!-- Left Hero Content -->
-                <div class="lg:col-span-6 space-y-4 sm:space-y-6 text-left">
-                    <h1 class="text-3xl sm:text-5xl lg:text-[3.4rem] font-extrabold text-kreva-900 tracking-tight leading-[1.15]">
-                        Discover Creativity,<br>
-                        Support Local.
-                    </h1>
+    <section id="beranda" aria-labelledby="hero-title" class="relative isolate min-h-[540px] overflow-hidden sm:min-h-[620px] lg:min-h-[680px]">
+        <img src="{{ asset('images/craft1.jpg') }}"
+             alt="Pengrajin lokal Indonesia sedang membuat kerajinan tangan"
+             fetchpriority="high"
+             class="absolute inset-0 h-full w-full object-cover object-[62%_center]">
+        <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-r from-[#1e3325]/95 via-[#1e3325]/70 to-[#1e3325]/15"></div>
+        <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-t from-[#1e3325]/35 via-transparent to-[#1e3325]/10"></div>
 
-                    <p class="text-sm sm:text-base lg:text-lg text-stone-600 max-w-lg leading-relaxed font-normal">
-                        Temukan dan dukung produk lokal terbaik dari UMKM Indonesia di KREVA!
-                    </p>
+        <div class="relative mx-auto flex min-h-[540px] max-w-7xl items-center px-4 py-16 sm:min-h-[620px] sm:px-6 lg:min-h-[680px] lg:px-8">
+            <div class="max-w-2xl space-y-5 text-left sm:space-y-6">
+                <p class="inline-flex items-center gap-2 rounded-full border border-[#f5efe3]/30 bg-[#f5efe3]/10 px-4 py-2 text-xs font-semibold tracking-[.16em] text-[#f5efe3] backdrop-blur-sm sm:text-sm">
+                    <span class="h-2 w-2 rounded-full bg-[#d96a28]"></span>
+                    KARYA LOKAL, CERITA NUSANTARA
+                </p>
+                <h1 id="hero-title" class="text-4xl font-extrabold leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-[3.8rem]">
+                    Discover Creativity,<br>
+                    Support Local.
+                </h1>
 
-                    <div class="pt-2">
-                        <a href="{{ route('marketplace.index') }}"
-                           class="inline-flex items-center gap-2.5 bg-kreva-800 hover:bg-kreva-900 text-white font-medium text-sm sm:text-base px-6 sm:px-7 py-3 sm:py-3.5 rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 group">
-                            <span>Belanja Sekarang</span>
-                            <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
-                        </a>
-                    </div>
+                <p class="max-w-xl text-base leading-relaxed text-[#f5efe3]/90 sm:text-lg lg:text-xl">
+                    Temukan dan dukung produk lokal terbaik dari UMKM Indonesia di KREVA!
+                </p>
+
+                <div class="pt-2">
+                    <a href="{{ route('marketplace.index') }}"
+                       class="group inline-flex items-center gap-2.5 rounded-full bg-[#f5efe3] px-6 py-3.5 text-sm font-semibold text-[#26402e] shadow-lg shadow-black/15 transition-all duration-200 hover:-translate-y-0.5 hover:bg-white sm:px-7 sm:text-base">
+                        <span>Belanja Sekarang</span>
+                        <span class="transition-transform group-hover:translate-x-1">&rarr;</span>
+                    </a>
                 </div>
-
-                <!-- Right Hero Artwork / Image Showcase -->
-                <div class="lg:col-span-6 relative">
-                    <!-- Artwork Container with Sage Blob Backdrop -->
-                    <div class="relative w-full rounded-3xl sm:rounded-[36px] overflow-hidden bg-gradient-to-tr from-[#dce5dc] via-[#e5ede5] to-[#ece5d8] border border-[#d8e2d8] shadow-sm flex items-center justify-center p-3 sm:p-4">
-                        
-                        <!-- Background Monas & Motif Watermark Graphic -->
-                        <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#243e2e_1px,transparent_1px)] [background-size:16px_16px]"></div>
-                        
-                        <!-- Hero Showcase Image -->
-                        <div class="relative z-10 w-full overflow-hidden rounded-2xl">
-                            <img src="{{ asset('images/craft1.jpg') }}"
-                                 alt="KREVA - Produk Lokal Indonesia: Kerajinan Kreatif UMKM"
-                                 class="w-full h-auto object-cover object-center transform hover:scale-[1.02] transition-transform duration-500 rounded-2xl shadow-sm">
-                        </div>
-
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -641,16 +628,16 @@
                     @foreach ($featuredProducts as $product)
                         <article class="group overflow-hidden rounded-2xl border border-[#ede7db] bg-white shadow-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                                  x-show="!searchQuery || @js($product->name.' '.$product->category?->name).toLowerCase().includes(searchQuery.toLowerCase())">
-                            <div class="flex aspect-[4/3] items-center justify-center overflow-hidden bg-[#f3f0e8]">
+                            <a href="{{ route('products.show', ['slug' => $product->slug]) }}" aria-label="Lihat detail {{ $product->name }}" class="flex aspect-[4/3] items-center justify-center overflow-hidden bg-[#f3f0e8]">
                                 @if ($product->images->isNotEmpty())
                                     <img src="{{ $product->images->first()->url }}" alt="Foto {{ $product->name }}" class="h-full w-full object-cover">
                                 @else
                                     <span class="text-5xl" aria-hidden="true">🛍️</span>
                                 @endif
-                            </div>
+                            </a>
                             <div class="p-4">
                                 <p class="text-xs font-semibold uppercase tracking-wide text-kreva-600">{{ $product->category?->name }}</p>
-                                <h3 class="mt-1 truncate text-sm font-bold text-stone-900 transition group-hover:text-kreva-800 sm:text-base">{{ $product->name }}</h3>
+                                <h3 class="mt-1 truncate text-sm font-bold text-stone-900 transition group-hover:text-kreva-800 sm:text-base"><a href="{{ route('products.show', ['slug' => $product->slug]) }}">{{ $product->name }}</a></h3>
                                 <p class="mt-2 text-sm font-bold text-kreva-900">Rp {{ number_format((float) $product->price_min, 0, ',', '.') }}</p>
                                 <div class="mt-3 flex items-center justify-between border-t border-stone-100 pt-3 text-xs text-stone-500">
                                     <span>{{ $product->store?->name ?? 'Penjual UMKM' }}</span>
@@ -672,9 +659,14 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-stretch">
                 
                 <!-- Left Banner: Dukung UMKM Lokal -->
-                <div class="lg:col-span-7 bg-[#455f4a] rounded-3xl p-6 sm:p-8 text-white relative overflow-hidden flex flex-col justify-between shadow-sm">
+                <div class="lg:col-span-7 relative isolate min-h-[330px] overflow-hidden rounded-3xl bg-[#455f4a] p-6 text-white shadow-sm sm:min-h-[350px] sm:p-8">
+                    <img src="{{ asset('images/craft2.jpg') }}"
+                         alt="Pelaku UMKM Indonesia sedang membuat kerajinan"
+                         class="absolute inset-0 h-full w-full object-cover object-[68%_center]">
+                    <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-r from-[#314a38]/95 via-[#314a38]/80 to-[#314a38]/20"></div>
+                    <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-t from-[#1e3325]/25 via-transparent to-[#1e3325]/10"></div>
                     
-                    <div class="relative z-10 max-w-sm sm:max-w-md">
+                    <div class="relative z-10 flex min-h-[278px] max-w-sm flex-col justify-center sm:min-h-[286px] sm:max-w-md">
                         <!-- Storefront Icon -->
                         <div class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center mb-4 backdrop-blur-xs">
                             <svg class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
@@ -696,32 +688,29 @@
 
                         <!-- CTA Button -->
                         <div class="mt-6">
-                            <a href="#penjual"
+                            <a href="{{ route('marketplace.index') }}"
                                class="inline-flex items-center gap-2 bg-white text-stone-900 hover:bg-stone-100 font-semibold text-xs sm:text-sm px-5 py-2.5 rounded-full shadow hover:shadow-md transition duration-200">
-                                <span>Pelajari Lebih Lanjut</span>
+                                <span>Jelajahi Produk Lokal</span>
                                 <span>&rarr;</span>
                             </a>
                         </div>
                     </div>
-
-                    <!-- Right Artisan Illustration/Photo inside banner -->
-                    <div class="absolute right-0 bottom-0 top-0 w-2/5 sm:w-1/3 flex items-end justify-end pointer-events-none">
-                        <img src="{{ asset('images/craft2.jpg') }}"
-                             alt="Pelaku UMKM Indonesia"
-                             class="h-full w-auto object-cover object-left-bottom">
-                    </div>
-
                 </div>
 
                 <!-- Right Banner: Ikuti KREVA Survey! -->
-                <div class="lg:col-span-5 bg-warm-peach border border-[#ebdccb] rounded-3xl p-6 sm:p-8 text-stone-900 relative overflow-hidden flex flex-col justify-between shadow-sm">
-                    
-                    <div class="relative z-10 max-w-xs">
-                        <h3 class="text-xl sm:text-2xl font-bold text-stone-900 leading-snug">
+                <div class="lg:col-span-5 relative isolate min-h-[330px] overflow-hidden rounded-3xl bg-[#e8d8c6] p-6 text-white shadow-sm sm:min-h-[350px] sm:p-8">
+                    <img src="{{ asset('images/survey.jpg') }}"
+                         alt="Ilustrasi formulir survei"
+                         class="absolute inset-0 h-full w-full object-cover object-[center_45%]">
+                    <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-r from-[#1e3325]/95 via-[#1e3325]/70 to-[#1e3325]/10"></div>
+                    <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-t from-[#1e3325]/25 via-transparent to-[#1e3325]/10"></div>
+
+                    <div class="relative z-10 flex min-h-[278px] max-w-xs flex-col justify-center sm:min-h-[286px]">
+                        <h3 class="text-xl font-bold leading-snug sm:text-2xl">
                             Ikuti KREVA Survey!
                         </h3>
 
-                        <p class="text-xs sm:text-sm text-stone-600 mt-2.5 leading-relaxed">
+                        <p class="mt-2.5 text-xs leading-relaxed text-[#f5efe3]/90 sm:text-sm">
                             Suara kamu penting untuk pengembangan kami.
                         </p>
 
@@ -729,13 +718,13 @@
                         <div class="mt-6">
                             @auth
                                 <button @click="surveyOpen = true; resetSurvey()"
-                                   class="inline-flex items-center gap-2 bg-kreva-800 hover:bg-kreva-900 text-white font-medium text-xs sm:text-sm px-5 py-2.5 rounded-full shadow hover:shadow-md transition duration-200">
+                                   class="inline-flex items-center gap-2 rounded-full bg-[#f5efe3] px-5 py-2.5 text-xs font-semibold text-[#26402e] shadow transition duration-200 hover:bg-white hover:shadow-md sm:text-sm">
                                     <span>Isi Survey Sekarang</span>
                                     <span>&rarr;</span>
                                 </button>
                             @else
                                 <button @click="surveyOpen = true; resetSurvey()"
-                                   class="inline-flex items-center gap-2 bg-kreva-800 hover:bg-kreva-900 text-white font-medium text-xs sm:text-sm px-5 py-2.5 rounded-full shadow hover:shadow-md transition duration-200">
+                                   class="inline-flex items-center gap-2 rounded-full bg-[#f5efe3] px-5 py-2.5 text-xs font-semibold text-[#26402e] shadow transition duration-200 hover:bg-white hover:shadow-md sm:text-sm">
                                     <span>Isi Survey Sekarang</span>
                                     <span>&rarr;</span>
                                 </button>
@@ -743,13 +732,6 @@
                         </div>
                     </div>
 
-                    <!-- Right Survey Clipboard graphic inside banner -->
-                    <div class="absolute right-2 bottom-0 top-0 w-1/3 sm:w-2/5 flex items-end justify-end pointer-events-none">
-                        <img src="{{ asset('images/survey.jpg') }}"
-                             alt="KREVA Survey"
-                             class="h-[88%] w-auto object-contain object-bottom-right">
-                    </div>
-
                 </div>
 
             </div>
@@ -757,102 +739,7 @@
     </section>
 
 
-    <!-- ================= SECTION 4: PENJUAL TERPILIH ================= -->
-    <section id="penjual" class="py-8 sm:py-12 border-t border-[#f0ebd9]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Section Title Header -->
-            <div class="flex items-center justify-between mb-6 sm:mb-8">
-                <div class="flex items-center gap-2">
-                    <svg class="w-5 h-5 text-kreva-700" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M21 3c0 0-8.5.5-13.5 5.5S2 22 2 22s8.5-.5 13.5-5.5S21 3 21 3z"/>
-                        <path d="M8.5 15.5L15 9" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
-                    </svg>
-                    <h2 class="text-xl sm:text-2xl font-bold text-kreva-900">
-                        Penjual Terpilih
-                    </h2>
-                </div>
-
-                <a href="#penjual" class="group inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-stone-700 hover:text-kreva-800 transition">
-                    <span>Lihat Semua</span>
-                    <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
-                </a>
-            </div>
-
-            <!-- 4 Sellers Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                
-                <!-- Seller 1: Srikandi Craft -->
-                <div class="bg-warm-card hover:bg-white border border-[#ede5d6] hover:border-kreva-600/40 rounded-2xl p-4 flex items-center gap-3.5 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer">
-                    <img src="{{ asset('images/landing/seller-srikandi.png') }}"
-                         alt="Srikandi Craft"
-                         class="w-11 h-11 rounded-full object-cover border border-[#e5d8c3] shrink-0">
-                    <div class="flex-1 min-w-0">
-                        <h4 class="text-sm font-bold text-stone-900 truncate">
-                            Srikandi Craft
-                        </h4>
-                        <div class="flex items-center gap-1 text-xs text-stone-600 mt-0.5">
-                            <span class="text-amber-500">★</span>
-                            <span class="font-semibold text-stone-800">4.8</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Seller 2: Dapoer Nusantara -->
-                <div class="bg-warm-card hover:bg-white border border-[#ede5d6] hover:border-kreva-600/40 rounded-2xl p-4 flex items-center gap-3.5 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer">
-                    <img src="{{ asset('images/landing/seller-dapoer.png') }}"
-                         alt="Dapoer Nusantara"
-                         class="w-11 h-11 rounded-full object-cover border border-[#e5d8c3] shrink-0">
-                    <div class="flex-1 min-w-0">
-                        <h4 class="text-sm font-bold text-stone-900 truncate">
-                            Dapoer Nusantara
-                        </h4>
-                        <div class="flex items-center gap-1 text-xs text-stone-600 mt-0.5">
-                            <span class="text-amber-500">★</span>
-                            <span class="font-semibold text-stone-800">4.7</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Seller 3: Anyaman Kita -->
-                <div class="bg-warm-card hover:bg-white border border-[#ede5d6] hover:border-kreva-600/40 rounded-2xl p-4 flex items-center gap-3.5 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer">
-                    <img src="{{ asset('images/landing/seller-anyaman.png') }}"
-                         alt="Anyaman Kita"
-                         class="w-11 h-11 rounded-full object-cover border border-[#e5d8c3] shrink-0">
-                    <div class="flex-1 min-w-0">
-                        <h4 class="text-sm font-bold text-stone-900 truncate">
-                            Anyaman Kita
-                        </h4>
-                        <div class="flex items-center gap-1 text-xs text-stone-600 mt-0.5">
-                            <span class="text-amber-500">★</span>
-                            <span class="font-semibold text-stone-800">4.9</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Seller 4: Batik Lestari -->
-                <div class="bg-warm-card hover:bg-white border border-[#ede5d6] hover:border-kreva-600/40 rounded-2xl p-4 flex items-center gap-3.5 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 cursor-pointer">
-                    <img src="{{ asset('images/landing/seller-lestari.png') }}"
-                         alt="Batik Lestari"
-                         class="w-11 h-11 rounded-full object-cover border border-[#e5d8c3] shrink-0">
-                    <div class="flex-1 min-w-0">
-                        <h4 class="text-sm font-bold text-stone-900 truncate">
-                            Batik Lestari
-                        </h4>
-                        <div class="flex items-center gap-1 text-xs text-stone-600 mt-0.5">
-                            <span class="text-amber-500">★</span>
-                            <span class="font-semibold text-stone-800">4.8</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- ================= SECTION 5: TENTANG KAMI ================= -->
+    <!-- ================= SECTION 4: TENTANG KAMI ================= -->
     <section id="tentang" class="py-12 sm:py-16 bg-[#f7f2e7] border-t border-[#ede4d3]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -939,7 +826,7 @@
                     <ul class="space-y-2 text-xs text-kreva-100/75 font-normal">
                         <li><a href="{{ url('/') }}" class="hover:text-white transition">Beranda</a></li>
                         <li><a href="#produk" class="hover:text-white transition">Produk</a></li>
-                        <li><a href="#penjual" class="hover:text-white transition">Toko</a></li>
+                        <li><a href="{{ route('marketplace.index') }}" class="hover:text-white transition">Toko</a></li>
                         <li><a href="#survey" class="hover:text-white transition">Survey</a></li>
                         <li><a href="#tentang" class="hover:text-white transition">Tentang Kami</a></li>
                     </ul>

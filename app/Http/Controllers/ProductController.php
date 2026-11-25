@@ -62,6 +62,25 @@ class ProductController extends Controller
         return view('marketplace.index', compact('products', 'categories', 'databaseUnavailable'));
     }
 
+    public function show(Request $request, string $slug): View
+    {
+        $product = Product::query()
+            ->visible()
+            ->with([
+                'category:id,name',
+                'store:id,name,city,province,user_id',
+                'images',
+                'variants',
+            ])
+            ->where('products.slug', $slug)
+            ->firstOrFail();
+        $chatHistory = $request->user()?->account_type === 'buyer'
+            ? $request->session()->get("buyer_ai_chat.{$request->user()->getAuthIdentifier()}.{$product->id}", [])
+            : [];
+
+        return view('marketplace.show', compact('product', 'chatHistory'));
+    }
+
     public function buyerDashboard(): View
     {
         $databaseUnavailable = false;

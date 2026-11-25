@@ -21,11 +21,13 @@
                     @if (auth()->user()->account_type === 'buyer')
                         <a href="{{ route('marketplace.index') }}" class="text-stone-700 transition hover:text-[#26402e]">Katalog UMKM</a>
                         <a href="{{ route('cart.index') }}" class="text-stone-700 transition hover:text-[#26402e]">Keranjang ({{ auth()->user()->cart?->items()->sum('qty') ?? 0 }})</a>
+                        <a href="{{ route('buyer.chats.index') }}" class="text-stone-700 transition hover:text-[#26402e]">Pesan</a>
                         <a href="{{ route('buyer.dashboard') }}" class="text-stone-700 hover:text-[#26402e]">Dashboard Pembeli</a>
                         <a href="{{ route('buyer.orders.index') }}" class="text-stone-700 hover:text-[#26402e]">Pesanan Saya</a>
                     @elseif (auth()->user()->account_type === 'seller' && auth()->user()->role !== 'employee')
                         <a href="{{ route('seller.dashboard') }}" class="text-stone-700 transition hover:text-[#26402e]">Beranda Penjual</a>
                         <a href="{{ route('marketplace.index') }}" class="text-stone-700 transition hover:text-[#26402e]">Lihat Katalog</a>
+                        <a href="{{ route('seller.chats.index') }}" class="text-stone-700 transition hover:text-[#26402e]">Pesan</a>
                     @endif
                     <span class="hidden text-stone-600 sm:inline">{{ auth()->user()->nama_user }}</span>
                     <form method="POST" action="{{ route('logout') }}">

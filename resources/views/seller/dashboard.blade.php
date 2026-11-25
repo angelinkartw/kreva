@@ -20,7 +20,7 @@
         <div class="absolute -right-20 -top-28 -z-10 h-80 w-80 rounded-full border border-white/10"></div>
         <div class="absolute -right-8 -top-16 -z-10 h-56 w-56 rounded-full border border-white/10"></div>
 
-        <div class="grid items-center gap-8 px-6 py-9 sm:px-10 sm:py-12 lg:grid-cols-[minmax(0,1fr)_auto] lg:px-14">
+        <div class="grid items-center gap-8 px-6 py-9 sm:px-10 sm:py-12 lg:px-14">
             <div class="max-w-2xl">
                 <span class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3.5 py-1.5 text-xs font-semibold tracking-wide text-[#f5efe3]">
                     <span class="h-1.5 w-1.5 rounded-full bg-[#e9a46e]"></span>
@@ -54,9 +54,6 @@
                 </div>
             </div>
 
-            <div class="hidden lg:block">
-                <img src="{{ asset('images/landing/logo-crop.png') }}" alt="" class="h-36 w-36 rounded-3xl border border-white/20 bg-white/10 object-contain p-4 shadow-2xl shadow-black/10 xl:h-44 xl:w-44">
-            </div>
         </div>
     </section>
 

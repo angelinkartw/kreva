@@ -36,7 +36,12 @@ return [
     ],
 
     'n8n' => [
-    'webhook_url' => env('N8N_WEBHOOK_URL'),
-],
+        'webhook_url' => env('N8N_WEBHOOK_URL'),
+    ],
+
+    'openai' => [
+        'api_key' => env('OPENAI_API_KEY'),
+        'model' => env('OPENAI_MODEL', 'gpt-4o-mini'),
+    ],
 
 ];
